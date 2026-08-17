@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-label="Dennis Furrer, dfurrer.com. Founder. CTO. 10+ years in web3.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-label="Dennis Furrer, dfurrer.com. Founder. CTO. 10y in web3. DeFi.">
   <style>
     .bg     { fill: #FBFBF9; }
     .frame  { fill: none; stroke: #E3E3DE; stroke-width: 1; shape-rendering: crispEdges; }
@@ -36,7 +36,8 @@
   </g>
 
   <g class="micro fade">
-    <text x="44" y="52">10+ YEARS IN WEB3</text>
+    <text x="44" y="52">10y IN WEB3</text>
+    <text x="1156" y="52" text-anchor="end">DEFI</text>
     <text x="44" y="256">FOUNDER</text>
     <text x="1156" y="256" text-anchor="end">CTO</text>
   </g>
