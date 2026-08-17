@@ -14,10 +14,6 @@
   <samp>Distributed systems / Low latency systems / Consumer applications / Whitelabel platforms</samp>
 </p>
 
-<p align="center">
-  <samp>CTO at Outcome. Everything else here was built solo.</samp>
-</p>
-
 <br>
 
 ### Selected work
