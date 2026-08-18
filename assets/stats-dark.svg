@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 168" width="1200" height="168"
-     role="img" aria-label="1M+ MONTHLY ACTIVES (globe.li) - #1 OF 569 ON PM.WIKI (globe.li) - 4 SDK LANGUAGES (hip4.dev) - 5 COMPANIES 0→1 (founding / C-level) - 65 TOOLS SHIPPED (in 2026)">
+     role="img" aria-label="1M+ MONTHLY ACTIVES (globe.li) - #1 OF 569 ON PM.WIKI (globe.li) - 4 SDK LANGUAGES (hip4.dev) - 5 COMPANIES 0→1 (founding / CTO) - 9 VENUES INTEGRATED (pred · spot · perps) - 65 TOOLS SHIPPED (in 2026)">
   <style>
     .big { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Inter, Helvetica, Arial, sans-serif; font-size:46px; font-weight:600; letter-spacing:-1px; fill:#eaeeff }
     .lab { font-family:ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size:12px; letter-spacing:2.6px; fill:#98a6cf }
-    .sub { font-family:ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size:11px; letter-spacing:1.6px; fill:#5d6a90 }
+    .sub { font-family:ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size:10.5px; letter-spacing:1.2px; fill:#5d6a90 }
     .fade-in { animation:fade 1.2s ease .3s both }
     
     @keyframes rise  { from { opacity:0; transform:translateY(10px) } to { opacity:1; transform:none } }
@@ -32,28 +32,33 @@
   </g>
 
   <g style="animation:rise .95s cubic-bezier(.16,1,.3,1) 0.25s both" class="needs-motion">
-    <text x="155.2" y="80" text-anchor="middle" class="big">1M+</text>
-    <text x="155.2" y="110" text-anchor="middle" class="lab">MONTHLY ACTIVES</text>
-    <text x="155.2" y="132" text-anchor="middle" class="sub">globe.li</text>
+    <text x="136.7" y="80" text-anchor="middle" class="big">1M+</text>
+    <text x="136.7" y="110" text-anchor="middle" class="lab">MONTHLY ACTIVES</text>
+    <text x="136.7" y="132" text-anchor="middle" class="sub">globe.li</text>
   </g>
   <g style="animation:rise .95s cubic-bezier(.16,1,.3,1) 0.36s both" class="needs-motion">
-    <text x="377.6" y="80" text-anchor="middle" class="big">#1</text>
-    <text x="377.6" y="110" text-anchor="middle" class="lab">OF 569 ON PM.WIKI</text>
-    <text x="377.6" y="132" text-anchor="middle" class="sub">globe.li</text>
-  </g><rect x="266.4" y="48" width="1" height="76" fill="#1b2440" class="fade-in" shape-rendering="crispEdges"/>
+    <text x="322.0" y="80" text-anchor="middle" class="big">#1</text>
+    <text x="322.0" y="110" text-anchor="middle" class="lab">OF 569 ON PM.WIKI</text>
+    <text x="322.0" y="132" text-anchor="middle" class="sub">globe.li</text>
+  </g><rect x="229.3" y="48" width="1" height="76" fill="#1b2440" class="fade-in" shape-rendering="crispEdges"/>
   <g style="animation:rise .95s cubic-bezier(.16,1,.3,1) 0.47s both" class="needs-motion">
-    <text x="600.0" y="80" text-anchor="middle" class="big">4</text>
-    <text x="600.0" y="110" text-anchor="middle" class="lab">SDK LANGUAGES</text>
-    <text x="600.0" y="132" text-anchor="middle" class="sub">hip4.dev</text>
-  </g><rect x="488.8" y="48" width="1" height="76" fill="#1b2440" class="fade-in" shape-rendering="crispEdges"/>
+    <text x="507.3" y="80" text-anchor="middle" class="big">4</text>
+    <text x="507.3" y="110" text-anchor="middle" class="lab">SDK LANGUAGES</text>
+    <text x="507.3" y="132" text-anchor="middle" class="sub">hip4.dev</text>
+  </g><rect x="414.7" y="48" width="1" height="76" fill="#1b2440" class="fade-in" shape-rendering="crispEdges"/>
   <g style="animation:rise .95s cubic-bezier(.16,1,.3,1) 0.58s both" class="needs-motion">
-    <text x="822.4" y="80" text-anchor="middle" class="big">5</text>
-    <text x="822.4" y="110" text-anchor="middle" class="lab">COMPANIES 0→1</text>
-    <text x="822.4" y="132" text-anchor="middle" class="sub">founding / C-level</text>
-  </g><rect x="711.2" y="48" width="1" height="76" fill="#1b2440" class="fade-in" shape-rendering="crispEdges"/>
+    <text x="692.7" y="80" text-anchor="middle" class="big">5</text>
+    <text x="692.7" y="110" text-anchor="middle" class="lab">COMPANIES 0→1</text>
+    <text x="692.7" y="132" text-anchor="middle" class="sub">founding / CTO</text>
+  </g><rect x="600.0" y="48" width="1" height="76" fill="#1b2440" class="fade-in" shape-rendering="crispEdges"/>
   <g style="animation:rise .95s cubic-bezier(.16,1,.3,1) 0.69s both" class="needs-motion">
-    <text x="1044.8" y="80" text-anchor="middle" class="big">65</text>
-    <text x="1044.8" y="110" text-anchor="middle" class="lab">TOOLS SHIPPED</text>
-    <text x="1044.8" y="132" text-anchor="middle" class="sub">in 2026</text>
-  </g><rect x="933.6" y="48" width="1" height="76" fill="#1b2440" class="fade-in" shape-rendering="crispEdges"/>
+    <text x="878.0" y="80" text-anchor="middle" class="big">9</text>
+    <text x="878.0" y="110" text-anchor="middle" class="lab">VENUES INTEGRATED</text>
+    <text x="878.0" y="132" text-anchor="middle" class="sub">pred · spot · perps</text>
+  </g><rect x="785.3" y="48" width="1" height="76" fill="#1b2440" class="fade-in" shape-rendering="crispEdges"/>
+  <g style="animation:rise .95s cubic-bezier(.16,1,.3,1) 0.80s both" class="needs-motion">
+    <text x="1063.3" y="80" text-anchor="middle" class="big">65</text>
+    <text x="1063.3" y="110" text-anchor="middle" class="lab">TOOLS SHIPPED</text>
+    <text x="1063.3" y="132" text-anchor="middle" class="sub">in 2026</text>
+  </g><rect x="970.7" y="48" width="1" height="76" fill="#1b2440" class="fade-in" shape-rendering="crispEdges"/>
 </svg>

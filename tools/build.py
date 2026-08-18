@@ -171,7 +171,8 @@ STATS = [
     ("1M+", "MONTHLY ACTIVES", "globe.li"),
     ("#1", "OF 569 ON PM.WIKI", "globe.li"),
     ("4", "SDK LANGUAGES", "hip4.dev"),
-    ("5", "COMPANIES 0→1", "founding / C-level"),
+    ("5", "COMPANIES 0→1", "founding / CTO"),
+    ("9", "VENUES INTEGRATED", "pred · spot · perps"),
     ("65", "TOOLS SHIPPED", "in 2026"),
 ]
 
@@ -180,6 +181,14 @@ def stats(c):
     W, H = 1200, 168
     n = len(STATS)
     colw = (W - 88) / n
+    # Adding a column silently shrinks every other one; the sub line overflowed
+    # first and ran into its neighbour. Fail loudly instead of shipping it.
+    for _b, lab, sub in STATS:
+        for txt, adv in ((lab, 12 * .60 + 2.6), (sub, 10.5 * .60 + 1.2)):
+            if len(txt) * adv > colw - 12:
+                raise SystemExit(
+                    f"stats: '{txt}' is ~{len(txt)*adv:.0f}px in a {colw:.0f}px "
+                    f"column - shorten it or drop a column")
     out = []
     for i, (big, label, sub) in enumerate(STATS):
         x = 44 + colw * i + colw / 2
@@ -199,7 +208,7 @@ def stats(c):
   <style>
     .big {{ font-family:{DISPLAY}; font-size:46px; font-weight:600; letter-spacing:-1px; fill:{c['text']} }}
     .lab {{ font-family:{MONO}; font-size:12px; letter-spacing:2.6px; fill:{c['dim']} }}
-    .sub {{ font-family:{MONO}; font-size:11px; letter-spacing:1.6px; fill:{c['faint']} }}
+    .sub {{ font-family:{MONO}; font-size:10.5px; letter-spacing:1.2px; fill:{c['faint']} }}
     .fade-in {{ animation:fade 1.2s ease .3s both }}
     {BASE_KEYFRAMES}{REDUCED}
   </style>
@@ -265,7 +274,8 @@ def arc(c):
 # products and deliberately not on this diagram.
 # "→" renders as a built-on arrow rather than a chip.
 LAYERS = [
-    ("VENUES", ["Hyperliquid", "Aster", "Polymarket", "Limitless", "Lighter"]),
+    ("VENUES", ["Hyperliquid", "Polymarket", "Kalshi", "Limitless", "Myriad",
+                "Metaculus", "Manifold", "Aster", "Lighter"]),
     ("PROTOCOL", ["hip4.dev  ·  TS / Rust / Python / Go"]),
     ("INFRASTRUCTURE", ["perps.studio", "→", "Everex", "OMEN"]),
     ("MARKETS", ["outcome.xyz"]),
