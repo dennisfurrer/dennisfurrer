@@ -148,17 +148,18 @@ def globe(c, cx, cy, R):
 
 
 def pro_panels(c, x, y, w, h):
-    """The pro workspace: four panels in one tab. Same shape as the real thing."""
+    """pro's six tools, two across and three down. Two columns rather than
+    three because at this size a three-wide grid cannot hold the labels."""
     o, gap = [], 8
-    pw, ph = (w - gap) / 2, (h - gap) / 2
-    for i, name in enumerate(("collab", "design", "plan", "code")):
+    pw, ph = (w - gap) / 2, (h - gap * 2) / 3
+    for i, name in enumerate(("think", "plan", "design", "code", "collab", "glass")):
         px_ = x + (i % 2) * (pw + gap)
         py_ = y + (i // 2) * (ph + gap)
-        o.append(f'<rect x="{px_:.0f}" y="{py_:.0f}" width="{pw:.0f}" height="{ph:.0f}" rx="5" '
+        o.append(f'<rect x="{px_:.0f}" y="{py_:.0f}" width="{pw:.0f}" height="{ph:.0f}" rx="4" '
                  f'fill="{c["panel"]}" stroke="{c["frame"]}"/>')
-        o.append(f'<rect x="{px_:.0f}" y="{py_:.0f}" width="{pw:.0f}" height="13" rx="5" fill="{c["frame"]}" opacity=".55"/>')
+        o.append(f'<rect x="{px_:.0f}" y="{py_:.0f}" width="{pw:.0f}" height="9" rx="4" fill="{c["frame"]}" opacity=".55"/>')
         for d in range(3):
-            o.append(f'<circle cx="{px_+9+d*7:.0f}" cy="{py_+6.5:.0f}" r="1.7" fill="{c["faint"]}" opacity=".8"/>')
+            o.append(f'<circle cx="{px_+7+d*5.5:.1f}" cy="{py_+4.5:.1f}" r="1.3" fill="{c["faint"]}" opacity=".8"/>')
         o.append(f'<text x="{px_+pw/2:.0f}" y="{py_+ph/2+8:.0f}" text-anchor="middle" class="pn">{name}</text>')
     return "".join(o)
 
@@ -171,7 +172,7 @@ def header(c):
   <style>
     .name {{ font-family:{DISPLAY}; font-size:50px; font-weight:600; letter-spacing:9px; fill:{c['text']} }}
     .micro{{ font-family:{MONO}; font-size:12px; letter-spacing:3.4px; fill:{c['faint']} }}
-    .pn   {{ font-family:{MONO}; font-size:11px; letter-spacing:.6px; fill:{c['dim']} }}
+    .pn   {{ font-family:{MONO}; font-size:10px; letter-spacing:.4px; fill:{c['dim']} }}
     .rule {{ fill:{c['accent']}; transform-origin:center; transform-box:fill-box;
              animation:draw 1.15s cubic-bezier(.16,1,.3,1) .5s both }}
     .r1   {{ animation:rise 1s cubic-bezier(.16,1,.3,1) .10s both }}
@@ -197,7 +198,7 @@ def header(c):
   </defs>
 {frame(c, W, H)}
   <g class="late">{globe(c, gx, gy, gr)}</g>
-  <g class="late">{pro_panels(c, 918, 126, 200, 112)}</g>
+  <g class="late">{pro_panels(c, 918, 116, 200, 132)}</g>
   <text x="{gx}" y="286" text-anchor="middle" class="micro">GLOBE.LI</text>
   <text x="1018" y="286" text-anchor="middle" class="micro">PRO.</text>
 

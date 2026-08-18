@@ -5,15 +5,15 @@
 -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/header-dark.svg?v=6">
-  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg?v=6">
-  <img alt="Dennis Furrer — founder, CTO. dfurrer.com" src="assets/header-dark.svg?v=6" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/header-dark.svg?v=7">
+  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg?v=7">
+  <img alt="Dennis Furrer — founder, CTO. dfurrer.com" src="assets/header-dark.svg?v=7" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/stats-dark.svg?v=6">
-  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg?v=6">
-  <img alt="5 companies taken 0→1 · $39M+ raised · $1.1B+ combined market cap · #1 Hyperliquid builder worldwide · 1M+ monthly actives" src="assets/stats-dark.svg?v=6" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/stats-dark.svg?v=7">
+  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg?v=7">
+  <img alt="5 companies taken 0→1 · $39M+ raised · $1.1B+ combined market cap · #1 Hyperliquid builder worldwide · 1M+ monthly actives" src="assets/stats-dark.svg?v=7" width="100%">
 </picture>
 
 ### Selected work
@@ -21,7 +21,7 @@
 | | | |
 |:--|:--|:--|
 | **globe.li** | News-to-trade terminal integrating Hyperliquid, Polymarket, Limitless and Aster. 1M+ MAU, #1 of 569 on pm.wiki. | [`globe.li`](https://globe.li) |
-| **pro.** | Think, plan, design, code and collab in one tab — and an MCP server, so one prompt runs the pipeline and hands back a deployed URL. | [`pro.dfurrer.com`](https://pro.dfurrer.com) |
+| **pro.** | A browser-native workspace where an idea becomes a shipped product without leaving the tab. Six tools — think, plan, design, code, collab and glass — on one account, one file system, and one agency of Claude sessions that reads a project's state off the work itself rather than off a status somebody typed. The chain is real and connected: a think board's diagram feeds a plan, the design system feeds the screens, an in-browser IDE bundles and previews live, and the dashboard lets you reach into any app mid-flight. glass is a Chrome extension that extends the same canvas over anybody else's page — a shared link carries the page and your drawings on it, auto-inviting whoever opens it. | [`pro.dfurrer.com`](https://pro.dfurrer.com) |
 | **perps.studio × hip4.dev** | First market on testnet, first SDK, first whitelabel platform, first market on mainnet. The SDK behind the #1 builder worldwide (outcome.xyz) and a peak-#3, now #6, builder (globe.li). Branded exchange live in five minutes. | [`perps.studio`](https://perps.studio) · [`hip4.dev`](https://hip4.dev) |
 | **outcome.xyz** | HIP-4 prediction markets on Hyperliquid. #1 builder by trading volume, worldwide. Launched 39 days after I joined. | [`outcome.xyz`](https://outcome.xyz) |
 | **app.builder.markets** | One merged book, routed to best execution. Hyperliquid, Aster and Lighter depth stacked into a single ladder with the arb called out in basis points. Predictions from Polymarket and Limitless priced against one fair-value model and grouped by what they are a bet on. HIP-3 perp DEX deployment, vaults and analytics in the same tab. | [`app.builder.markets`](https://app.builder.markets) |
@@ -30,9 +30,9 @@
 | **…** | Sixty-odd more, all from this year. | [`dfurrer.com/tools`](https://dfurrer.com/tools) |
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/stack-dark.svg?v=6">
-  <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg?v=6">
-  <img alt="The stack: 20+ integrations, then infrastructure, markets, aggregation and an innovation layer — with automation, intelligence and productivity tooling beneath." src="assets/stack-dark.svg?v=6" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/stack-dark.svg?v=7">
+  <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg?v=7">
+  <img alt="The stack: 20+ integrations, then infrastructure, markets, aggregation and an innovation layer — with automation, intelligence and productivity tooling beneath." src="assets/stack-dark.svg?v=7" width="100%">
 </picture>
 
 ### Open source
@@ -45,6 +45,15 @@ The HIP-4 SDKs — first to ship, and still the only ones in four languages.
 | Rust | `hip-4-rust` | [github](https://github.com/perps-studio/hip-4-rust) |
 | Python | `hip-4-python` | [github](https://github.com/perps-studio/hip-4-python) |
 | Go | `hip4-go` | [github](https://github.com/perps-studio/hip4-go) |
+
+And pro runs a public MCP server — 39 tools across sessions, documents, the
+board, checks and shipping. The agent and the person hit the same endpoints;
+a board only one of them obeys is not a board.
+
+```bash
+claude mcp add --transport http pro https://pro.dfurrer.com/api/mcp \
+  --header "Authorization: Bearer pro_..."
+```
 
 <details>
 <summary><b>Track record</b> — five companies from zero to one</summary>
@@ -70,9 +79,9 @@ did not yet exist. The commit message reads *"Hyperliquid has not published the
 HIP-4 prediction markets API yet."*
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/firsts-dark.svg?v=6">
-  <source media="(prefers-color-scheme: light)" srcset="assets/firsts-light.svg?v=6">
-  <img alt="March 10 2026: HIP-4 goes live on Hyperliquid testnet at 15:32; working integration 17:41; working SDK 18:21; the first HIP-4 builder frontend in the world live at 19:12 — three hours forty minutes later; whitelabel market creation ships 21:43." src="assets/firsts-dark.svg?v=6" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/firsts-dark.svg?v=7">
+  <source media="(prefers-color-scheme: light)" srcset="assets/firsts-light.svg?v=7">
+  <img alt="March 10 2026: HIP-4 goes live on Hyperliquid testnet at 15:32; working integration 17:41; working SDK 18:21; the first HIP-4 builder frontend in the world live at 19:12 — three hours forty minutes later; whitelabel market creation ships 21:43." src="assets/firsts-dark.svg?v=7" width="100%">
 </picture>
 
 | | | |
@@ -95,6 +104,12 @@ Python and Go](#open-source), all open sourced rather than kept in-house. The
 first whitelabel platform on the standard. Top-3 builder worldwide twice; the
 platform now sits behind the #1 builder by volume and a peak-#3, now #6.
 
+
+### Everything else
+
+<a href="https://dfurrer.com/tools">
+  <img alt="dfurrer.com/tools — an infinite canvas of 65 tools, with globe.li and pro at the centre" src="assets/tools.webp?v=1" width="100%">
+</a>
 
 ---
 
