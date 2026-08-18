@@ -212,7 +212,7 @@ def header(c):
 
 # ── 2. stat band ────────────────────────────────────────────────────────────
 STATS = [
-    ("5", "COMPANIES 0→1", "founding · CTO"),
+    ("5", "COMPANIES BUILT", "Founder / CTO"),
     ("$1.1B+", "MARKET CAP", "combined"),
     ("#1", "HYPERLIQUID", "HIP-4 builder, worldwide"),
     ("$39M+", "RAISED", "combined"),

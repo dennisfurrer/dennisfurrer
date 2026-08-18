@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 168" width="1200" height="168"
-     role="img" aria-label="5 COMPANIES 0→1 (founding · CTO) - $1.1B+ MARKET CAP (combined) - #1 HYPERLIQUID (HIP-4 builder, worldwide) - $39M+ RAISED (combined) - 1M+ MONTHLY ACTIVES (across the work)">
+     role="img" aria-label="5 COMPANIES BUILT (Founder / CTO) - $1.1B+ MARKET CAP (combined) - #1 HYPERLIQUID (HIP-4 builder, worldwide) - $39M+ RAISED (combined) - 1M+ MONTHLY ACTIVES (across the work)">
   <style>
     .big { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Inter, Helvetica, Arial, sans-serif; font-size:46px; font-weight:600; letter-spacing:-1px; fill:#0c1330 }
     .lab { font-family:ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size:12px; letter-spacing:2.6px; fill:#46557a }
@@ -33,8 +33,8 @@
 
   <g style="animation:rise .95s cubic-bezier(.16,1,.3,1) 0.25s both" class="needs-motion">
     <text x="155.2" y="80" text-anchor="middle" class="big">5</text>
-    <text x="155.2" y="110" text-anchor="middle" class="lab">COMPANIES 0→1</text>
-    <text x="155.2" y="132" text-anchor="middle" class="sub">founding · CTO</text>
+    <text x="155.2" y="110" text-anchor="middle" class="lab">COMPANIES BUILT</text>
+    <text x="155.2" y="132" text-anchor="middle" class="sub">Founder / CTO</text>
   </g>
   <g style="animation:rise .95s cubic-bezier(.16,1,.3,1) 0.36s both" class="needs-motion">
     <text x="377.6" y="80" text-anchor="middle" class="big">$1.1B+</text>

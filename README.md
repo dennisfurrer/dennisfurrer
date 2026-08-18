@@ -5,15 +5,15 @@
 -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/header-dark.svg?v=10">
-  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg?v=10">
-  <img alt="Dennis Furrer — founder, CTO. dfurrer.com" src="assets/header-dark.svg?v=10" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/header-dark.svg?v=11">
+  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg?v=11">
+  <img alt="Dennis Furrer — founder, CTO. dfurrer.com" src="assets/header-dark.svg?v=11" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/stats-dark.svg?v=10">
-  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg?v=10">
-  <img alt="5 companies taken 0→1 · $1.1B+ combined market cap · #1 HIP-4 builder worldwide · $39M+ raised · 1M+ monthly actives" src="assets/stats-dark.svg?v=10" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/stats-dark.svg?v=11">
+  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg?v=11">
+  <img alt="5 companies built · $1.1B+ combined market cap · #1 HIP-4 builder worldwide · $39M+ raised · 1M+ monthly actives" src="assets/stats-dark.svg?v=11" width="100%">
 </picture>
 
 ### Selected work
@@ -36,7 +36,7 @@
 ### My DeFi stack in 2026
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/stack-dark.svg?v=10">
-  <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg?v=10">
-  <img alt="The stack: 20+ integrations, then infrastructure, markets, aggregation, innovation, and the automation, intelligence and productivity layers." src="assets/stack-dark.svg?v=10" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/stack-dark.svg?v=11">
+  <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg?v=11">
+  <img alt="The stack: 20+ integrations, then infrastructure, markets, aggregation, innovation, and the automation, intelligence and productivity layers." src="assets/stack-dark.svg?v=11" width="100%">
 </picture>
