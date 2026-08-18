@@ -5,15 +5,15 @@
 -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/header-dark.svg?v=3">
-  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg?v=3">
-  <img alt="Dennis Furrer — founder, CTO. Distributed systems, low latency, consumer apps, whitelabel platforms." src="assets/header-dark.svg?v=3" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/header-dark.svg?v=4">
+  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg?v=4">
+  <img alt="Dennis Furrer — founder, CTO. Distributed systems, low latency, consumer apps, whitelabel platforms." src="assets/header-dark.svg?v=4" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/stats-dark.svg?v=3">
-  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg?v=3">
-  <img alt="1M+ monthly actives on globe.li · #1 of 569 on pm.wiki · 4 SDK languages · 5 companies taken 0→1 · 65 tools shipped in 2026" src="assets/stats-dark.svg?v=3" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/stats-dark.svg?v=4">
+  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg?v=4">
+  <img alt="5 companies taken 0→1 · $39M+ raised · $1.1B+ combined market cap · #1 Hyperliquid builder worldwide · 1M+ monthly actives · 20+ DeFi integrations" src="assets/stats-dark.svg?v=4" width="100%">
 </picture>
 
 ### Selected work
@@ -22,7 +22,7 @@
 |:--|:--|:--|
 | **globe.li** | News-to-trade terminal integrating Hyperliquid, Polymarket, Limitless and Aster. 1M+ MAU, #1 of 569 on pm.wiki. | [`globe.li`](https://globe.li) |
 | **pro.** | Think, plan, design, code and collab in one tab — and an MCP server, so one prompt runs the pipeline and hands back a deployed URL. | [`pro.dfurrer.com`](https://pro.dfurrer.com) |
-| **perps.studio × hip4.dev** | First market on testnet, first SDK, first whitelabel platform, first market on mainnet. Branded exchange live in five minutes. | [`perps.studio`](https://perps.studio) · [`hip4.dev`](https://hip4.dev) |
+| **perps.studio × hip4.dev** | First market on testnet, first SDK, first whitelabel platform, first market on mainnet. The SDK behind the #1 builder worldwide (outcome.xyz) and a peak-#3, now #6, builder (globe.li). Branded exchange live in five minutes. | [`perps.studio`](https://perps.studio) · [`hip4.dev`](https://hip4.dev) |
 | **outcome.xyz** | HIP-4 prediction markets on Hyperliquid. #1 builder by trading volume, worldwide. Launched 39 days after I joined. | [`outcome.xyz`](https://outcome.xyz) |
 | **builder.markets** | Merged order book, best-execution routing across six venues. | [`app.builder.markets`](https://app.builder.markets) |
 | **parlayer.xyz** | Multi-venue parlays: copula pricing, hard solvency invariant. | [`parlayer.xyz`](https://parlayer.xyz) |
@@ -30,15 +30,15 @@
 | **…** | Sixty-odd more, all from this year. | [`dfurrer.com/tools`](https://dfurrer.com/tools) |
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/arc-dark.svg?v=3">
-  <source media="(prefers-color-scheme: light)" srcset="assets/arc-light.svg?v=3">
-  <img alt="The 2026 arc: Apr 19 axis v0.1 → Apr 22 globe.li → May HIP-4 firsts → Jun perps.studio → Jul Everex → Aug builder.markets" src="assets/arc-dark.svg?v=3" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/arc-dark.svg?v=4">
+  <source media="(prefers-color-scheme: light)" srcset="assets/arc-light.svg?v=4">
+  <img alt="The 2026 arc: Apr 19 axis v0.1 → Apr 22 globe.li → May HIP-4 firsts → Jun perps.studio → Jul Everex → Aug builder.markets" src="assets/arc-dark.svg?v=4" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/stack-dark.svg?v=3">
-  <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg?v=3">
-  <img alt="The stack: venues, protocol SDKs, infrastructure, aggregation, surface." src="assets/stack-dark.svg?v=3" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/stack-dark.svg?v=4">
+  <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg?v=4">
+  <img alt="The stack: 20+ integrations, the HIP-4 SDKs, perps.studio and what is built on it, outcome.xyz, the aggregators, and globe.li." src="assets/stack-dark.svg?v=4" width="100%">
 </picture>
 
 ### Open source
@@ -63,7 +63,7 @@ The HIP-4 SDKs — first to ship, and still the only ones in four languages.
 | **perps.studio** | Founder | White-label perps, spot and prediction markets. A branded exchange in five minutes. |
 | **Nika Finance** | CTO | Built the product and engineering org from scratch — internal POC through security-hardened V1. |
 | **Snag Solutions** | Founding engineer | Incepted a new vertical 0→1 into multi-million ARR. 2M+ monthly actives across dozens of clients. |
-| **Boson Protocol** | Founding engineer → Head of Engineering | First engineer. Built the product behind $35M+ raised and a $1.1B+ peak valuation; promoted four times, scaled the team to 65. |
+| **Boson Protocol** | Founding engineer → Head of Engineering | First engineer. Built the product behind $39M+ raised and $1.1B+ of combined market cap; promoted four times, scaled the team to 65. |
 
 </details>
 

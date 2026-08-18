@@ -74,6 +74,13 @@ def mark_grad(gid="dfu"):
             f'<stop offset="100%" stop-color="#c7d3f5"/></linearGradient>')
 
 
+def esc(t):
+    """SVG is XML: a bare & in a label breaks the entire file, silently, and
+    the browser just renders nothing. Escape everything that goes into a
+    <text> node."""
+    return (str(t).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
+
+
 def frame(c, w, h, inset=16.5):
     """Editorial hairline frame with corner crosshairs - carried over from the
     original header, which was the one thing worth keeping."""
@@ -95,7 +102,7 @@ def frame(c, w, h, inset=16.5):
 # ── 1. header ───────────────────────────────────────────────────────────────
 def header(c):
     W, H = 1200, 340
-    cx, cy, R = 952, 176, 97
+    cx, cy, R = 600, 182, 112
 
     # Fibonacci sphere, orthographic. Same construction as the WebGL field on
     # dfurrer.com - the point of the motif is that it is the same object.
@@ -123,7 +130,7 @@ def header(c):
     .name {{ font-family:{DISPLAY}; font-size:56px; font-weight:600; letter-spacing:11px; fill:{c['text']} }}
     .role {{ font-family:{MONO}; font-size:15.5px; letter-spacing:4.6px; fill:{c['dim']} }}
     .micro{{ font-family:{MONO}; font-size:12px; letter-spacing:3.4px; fill:{c['faint']} }}
-    .rule {{ fill:{c['accent']}; transform-origin:left center; transform-box:fill-box;
+    .rule {{ fill:{c['accent']}; transform-origin:center; transform-box:fill-box;
              animation:draw 1.15s cubic-bezier(.16,1,.3,1) .5s both }}
     .r1   {{ animation:rise 1s cubic-bezier(.16,1,.3,1) .10s both }}
     .r2   {{ animation:rise 1s cubic-bezier(.16,1,.3,1) .70s both }}
@@ -146,34 +153,36 @@ def header(c):
       <stop offset="100%" stop-color="{c['deep']}"/>
     </linearGradient>
     {mark_grad()}
+    <radialGradient id="scrim" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="{c['bg']}" stop-opacity=".82"/>
+      <stop offset="55%" stop-color="{c['bg']}" stop-opacity=".42"/>
+      <stop offset="100%" stop-color="{c['bg']}" stop-opacity="0"/>
+    </radialGradient>
   </defs>
 {frame(c, W, H)}
-  <ellipse cx="{cx}" cy="{cy}" rx="172" ry="150" fill="url(#hg)" class="halo"/>
+  <ellipse cx="{cx}" cy="{cy}" rx="300" ry="158" fill="url(#hg)" class="halo"/>
   <g class="orb late">{sphere}</g>
+  <ellipse cx="600" cy="200" rx="330" ry="62" fill="url(#scrim)" class="fade-in"/>
 
-  <g class="fade-in">{mark(66, 44, 38)}</g>
-  <g class="micro fade-in">
-    <text x="116" y="70">FOUNDER &#183; CTO &#183; 10Y IN WEB3</text>
-    <text x="66" y="306">ZERO &#8594; ONE, END TO END</text>
-    <text x="1134" y="306" text-anchor="end">DFURRER.COM</text>
-  </g>
+  <g class="fade-in">{mark(583, 40, 34)}</g>
 
-  <text class="name r1" x="66" y="176">DENNIS<tspan fill="url(#ng)"> FURRER</tspan><tspan class="cur" fill="{c['accent2']}">_</tspan></text>
-  <rect class="rule" x="66" y="198" width="232" height="2"/>
-  <text class="role r2" x="66" y="230">DISTRIBUTED SYSTEMS &#183; LOW LATENCY</text>
-  <text class="role r2" x="66" y="252">CONSUMER APPS &#183; WHITELABEL PLATFORMS</text>
+  <text class="name r1" x="600" y="196" text-anchor="middle">DENNIS<tspan fill="url(#ng)"> FURRER</tspan><tspan class="cur" fill="{c['accent2']}">_</tspan></text>
+  <rect class="rule" x="484" y="218" width="232" height="2"/>
+  <text class="role r2" x="600" y="252" text-anchor="middle">DISTRIBUTED SYSTEMS &#183; LOW LATENCY</text>
+  <text class="role r2" x="600" y="274" text-anchor="middle">CONSUMER APPS &#183; WHITELABEL PLATFORMS</text>
+  <text class="micro fade-in" x="600" y="308" text-anchor="middle">DFURRER.COM</text>
 </svg>
 """
 
 
 # ── 2. stat band ────────────────────────────────────────────────────────────
 STATS = [
-    ("1M+", "MONTHLY ACTIVES", "globe.li"),
-    ("#1", "OF 569 ON PM.WIKI", "globe.li"),
-    ("4", "SDK LANGUAGES", "hip4.dev"),
-    ("5", "COMPANIES 0→1", "founding / CTO"),
-    ("9", "VENUES INTEGRATED", "pred · spot · perps"),
-    ("65", "TOOLS SHIPPED", "in 2026"),
+    ("5", "COMPANIES 0→1", "founding · CTO"),
+    ("$39M+", "RAISED", "across them"),
+    ("$1.1B+", "MARKET CAP", "combined"),
+    ("#1", "HYPERLIQUID", "builder, worldwide"),
+    ("1M+", "MONTHLY ACTIVES", "across the work"),
+    ("20+", "DEFI INTEGRATIONS", "venues & protocols"),
 ]
 
 
@@ -195,16 +204,16 @@ def stats(c):
         d = 0.25 + i * 0.11
         out.append(f"""
   <g style="animation:rise .95s cubic-bezier(.16,1,.3,1) {d:.2f}s both" class="needs-motion">
-    <text x="{x:.1f}" y="80" text-anchor="middle" class="big">{big}</text>
-    <text x="{x:.1f}" y="110" text-anchor="middle" class="lab">{label}</text>
-    <text x="{x:.1f}" y="132" text-anchor="middle" class="sub">{sub}</text>
+    <text x="{x:.1f}" y="80" text-anchor="middle" class="big">{esc(big)}</text>
+    <text x="{x:.1f}" y="110" text-anchor="middle" class="lab">{esc(label)}</text>
+    <text x="{x:.1f}" y="132" text-anchor="middle" class="sub">{esc(sub)}</text>
   </g>""")
         if i:
             dx = 44 + colw * i
             out.append(f'<rect x="{dx:.1f}" y="48" width="1" height="76" fill="{c["frame"]}" '
                        f'class="fade-in" shape-rendering="crispEdges"/>')
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}"
-     role="img" aria-label="{' - '.join(f'{b} {l} ({s})' for b, l, s in STATS)}">
+     role="img" aria-label="{esc(' - '.join(f'{b} {l} ({s})' for b, l, s in STATS))}">
   <style>
     .big {{ font-family:{DISPLAY}; font-size:46px; font-weight:600; letter-spacing:-1px; fill:{c['text']} }}
     .lab {{ font-family:{MONO}; font-size:12px; letter-spacing:2.6px; fill:{c['dim']} }}
@@ -245,9 +254,9 @@ def arc(c):
   <g style="animation:fade .8s ease {d:.2f}s both" class="needs-motion">
     <circle cx="{x:.1f}" cy="{y}" r="5.5" fill="{c['bg']}" stroke="{c['accent']}" stroke-width="2"/>
     <circle cx="{x:.1f}" cy="{y}" r="2" fill="{c['accent2']}"/>
-    <text x="{x:.1f}" y="{ty}" text-anchor="middle" class="what">{what}</text>
-    <text x="{x:.1f}" y="{ny}" text-anchor="middle" class="note">{note}</text>
-    <text x="{x:.1f}" y="{y + (20 if up else -12)}" text-anchor="middle" class="when">{when}</text>
+    <text x="{x:.1f}" y="{ty}" text-anchor="middle" class="what">{esc(what)}</text>
+    <text x="{x:.1f}" y="{ny}" text-anchor="middle" class="note">{esc(note)}</text>
+    <text x="{x:.1f}" y="{y + (20 if up else -12)}" text-anchor="middle" class="when">{esc(when)}</text>
   </g>""")
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}"
      role="img" aria-label="2026 arc: {'; '.join(f'{w} {t} - {n}' for w, t, n in ARC)}">
@@ -272,10 +281,14 @@ def arc(c):
 # ── 4. the stack ────────────────────────────────────────────────────────────
 # The trading stack only. pro., laptime.dev and this.poc.rocks are separate
 # products and deliberately not on this diagram.
-# "→" renders as a built-on arrow rather than a chip.
+# "→" renders as a built-on arrow rather than a chip. Rows wrap.
+INTEGRATIONS = [
+    "Hyperliquid", "Polymarket", "Kalshi", "Limitless", "Metaculus", "Myriad",
+    "Manifold", "Lighter", "Aster", "Arcus", "Uniswap", "Jupiter", "1inch",
+    "0x", "Relay", "LiFi", "deBridge", "Across", "OogaBooga", "yield.xyz",
+]
 LAYERS = [
-    ("VENUES", ["Hyperliquid", "Polymarket", "Kalshi", "Limitless", "Myriad",
-                "Metaculus", "Manifold", "Aster", "Lighter"]),
+    ("INTEGRATIONS", INTEGRATIONS),
     ("PROTOCOL", ["hip4.dev  ·  TS / Rust / Python / Go"]),
     ("INFRASTRUCTURE", ["perps.studio", "→", "Everex", "OMEN"]),
     ("MARKETS", ["outcome.xyz"]),
@@ -285,38 +298,62 @@ LAYERS = [
 
 
 def stack(c):
-    W = 1200
-    rowh, top = 74, 82
-    H = top + rowh * len(LAYERS) - 18
-    out = []
-    for li, (name, items) in enumerate(LAYERS):
-        y = top + rowh * li
-        d = 0.3 + li * 0.14
-        out.append(f'<text x="44" y="{y+26}" class="layer">{name}</text>')
-        if li:
-            out.append(f'<rect x="44" y="{y-14}" width="{W-88}" height="1" fill="{c["frame"]}" '
-                       f'shape-rendering="crispEdges" class="fade-in"/>')
-        bx = 254
-        derived = False
+    """Rows wrap: the integrations row is twenty chips and will not fit on one
+    line, so each row grows by however many lines it needs and the rows below
+    shift down. Row heights are measured first, then drawn."""
+    W, LEFT, RIGHT = 1200, 254, 1160
+    CHIP_H, LINE_H, PAD_TOP, GAP = 34, 44, 82, 13
+
+    def chip_w(t):
+        return 17 + len(t) * 8.5
+
+    # measure: how many lines does each row need?
+    layout, y = [], PAD_TOP
+    for name, items in LAYERS:
+        bx, lines = LEFT, 1
+        placed = []
         for it in items:
-            if it == "\u2192":                       # built-on marker
-                out.append(f'<text x="{bx+9:.0f}" y="{y+28}" class="arrow">&#8594;</text>')
+            if it == "\u2192":
+                placed.append(("arrow", bx, lines - 1))
                 bx += 30
+                continue
+            w = chip_w(it)
+            if bx + w > RIGHT:                    # wrap
+                lines += 1
+                bx = LEFT
+            placed.append((it, bx, lines - 1))
+            bx += w + GAP
+        h = LINE_H * lines + 22
+        layout.append((name, placed, y, h, lines))
+        y += h
+    H = y - 12
+
+    out = []
+    for li, (name, placed, y, h, lines) in enumerate(layout):
+        d = 0.3 + li * 0.13
+        out.append(f'<text x="44" y="{y+26}" class="layer">{esc(name)}</text>')
+        if li:
+            out.append(f'<rect x="44" y="{y-12}" width="{W-88}" height="1" fill="{c["frame"]}" '
+                       f'shape-rendering="crispEdges" class="fade-in"/>')
+        derived = False
+        for it, bx, line in placed:
+            ly = y + 6 + LINE_H * line
+            if it == "arrow":
+                out.append(f'<text x="{bx+9:.0f}" y="{ly+22}" class="arrow">&#8594;</text>')
                 derived = True
                 continue
-            w = 17 + len(it) * 8.5
+            w = chip_w(it)
             accent = li in (1, len(LAYERS) - 1) and not derived
             fill = c["panel"] if not accent else c["accent"]
             txt = c["text"] if not accent else ("#04070f" if c is DARK else "#ffffff")
             stroke = c["frame"] if not accent else c["accent"]
             out.append(f"""
   <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) {d:.2f}s both" class="needs-motion">
-    <rect x="{bx:.0f}" y="{y+6}" width="{w:.0f}" height="34" rx="6" fill="{fill}" stroke="{stroke}"/>
-    <text x="{bx + w/2:.0f}" y="{y+28}" text-anchor="middle" class="chip" fill="{txt}">{it}</text>
+    <rect x="{bx:.0f}" y="{ly}" width="{w:.0f}" height="{CHIP_H}" rx="6" fill="{fill}" stroke="{stroke}"/>
+    <text x="{bx + w/2:.0f}" y="{ly+22}" text-anchor="middle" class="chip" fill="{txt}">{esc(it)}</text>
   </g>""")
-            bx += w + 13
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}"
-     role="img" aria-label="The stack: {'; '.join(n + ': ' + ', '.join(i) for n, i in LAYERS)}">
+     role="img" aria-label="{esc('The stack: ' + '; '.join(n + ': ' + ', '.join(i) for n, i in LAYERS))}">
   <style>
     .layer{{ font-family:{MONO}; font-size:12px; letter-spacing:2.8px; fill:{c['faint']} }}
     .chip {{ font-family:{MONO}; font-size:13.5px; letter-spacing:.4px }}
@@ -339,7 +376,13 @@ if __name__ == "__main__":
     for name, fn in BUILDERS.items():
         for theme, pal in (("dark", DARK), ("light", LIGHT)):
             path = os.path.join(OUT, f"{name}-{theme}.svg")
+            svg = fn(pal)
+            import xml.dom.minidom
+            try:
+                xml.dom.minidom.parseString(svg)      # never ship a broken SVG
+            except Exception as e:
+                raise SystemExit(f"{name}-{theme}: malformed XML -> {e}")
             with open(path, "w") as f:
-                f.write(fn(pal))
+                f.write(svg)
             print(f"  {os.path.relpath(path, os.path.dirname(OUT))}  {os.path.getsize(path):,} bytes")
     print("done")
