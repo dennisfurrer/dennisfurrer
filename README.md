@@ -49,7 +49,7 @@ than a migration.
 
 | | replaces | reads / writes |
 |:--|:--|:--|
-| **think** | Miro | Mermaid, SVG, PNG, JSON |
+| **think** | Miro | Miro bulk-import bundles, both directions — plus Mermaid, SVG, PNG, JSON |
 | **plan** | Jira | Jira CSV, round-trip — epics ↔ milestones, blocks links, statuses |
 | **design** | Figma | exports a Figma kit, design tokens as JSON |
 | **code** | VS Code / Cursor | imports from GitHub and Storybook, builds a Storybook, exports a zip |
