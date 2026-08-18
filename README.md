@@ -27,7 +27,7 @@
 | **app.builder.markets** | One merged book, routed to best execution. Hyperliquid, Aster and Lighter depth combined into one book. Predictions from Hyperliquid, Polymarket and Limitless priced against a fair-value model. HIP-3 perp DEX deployment, HIP-4 market deployment, vaults, analytics, lending and advanced account management. | [`app.builder.markets`](https://app.builder.markets) |
 | **parlayer.xyz** | Multi-venue parlays - Hyperliquid, Polymarket and Limitless legs in one slip. Copula pricing, hard solvency invariant. | [`parlayer.xyz`](https://parlayer.xyz) |\n| **rfq.fi** | Peer-to-peer OTC for custom outcome risk. Define the event/topic, source live quotes from many desks, execute one gasless order - fractional fills matched across counterparties & settled on-chain. | [`rfq.fi`](https://rfq.fi) |
 | **laptime.dev** | Performance, security, privacy and SEO in one report card. Browser extension and CI included. | [`laptime.dev`](https://laptime.dev) |
-| **…** | A hundred or so more, all builds from this year. Many are shown at the link attached. | [`dfurrer.com/tools`](https://dfurrer.com/tools) |
+| **…** | ~100 more builds from this year. Many are shown at the link attached. | [`dfurrer.com/tools`](https://dfurrer.com/tools) |
 
 <a href="https://dfurrer.com/tools">
   <img alt="dfurrer.com/tools - an infinite canvas of 66 tools, with globe.li and pro at the centre" src="assets/tools.webp?v=2" width="100%">
