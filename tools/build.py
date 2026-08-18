@@ -203,8 +203,8 @@ def header(c):
   <text x="1018" y="272" text-anchor="middle" class="micro">PRO.</text>
 
   <g class="fade-in">{mark(583, 34, 34)}</g>
-  <text class="name r1" x="600" y="176" text-anchor="middle">DENNIS<tspan fill="url(#ng)"> FURRER</tspan><tspan class="cur" fill="{c['accent2']}">_</tspan></text>
-  <rect class="rule" x="490" y="198" width="220" height="2"/>
+  <text class="name r1" x="600" y="184" text-anchor="middle">DENNIS<tspan fill="url(#ng)"> FURRER</tspan><tspan class="cur" fill="{c['accent2']}">_</tspan></text>
+  <rect class="rule" x="490" y="206" width="220" height="2"/>
   <text class="micro fade-in" x="600" y="306" text-anchor="middle">DFURRER.COM</text>
 </svg>
 """
@@ -214,7 +214,7 @@ def header(c):
 STATS = [
     ("5", "COMPANIES BUILT", "Founder / CTO"),
     ("$1.1B+", "MARKET CAP", "combined"),
-    ("#1", "HYPERLIQUID", "HIP-4 builder, worldwide"),
+    ("#1", "HYPERLIQUID", "HIP-4 builder, global"),
     ("$39M+", "RAISED", "combined"),
     ("1M+", "MONTHLY ACTIVES", "across the work"),
 ]
