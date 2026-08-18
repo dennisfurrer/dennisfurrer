@@ -213,9 +213,9 @@ def header(c):
 # ── 2. stat band ────────────────────────────────────────────────────────────
 STATS = [
     ("5", "COMPANIES 0→1", "founding · CTO"),
-    ("$39M+", "RAISED", "across them"),
+    ("$39M+", "RAISED", "combined"),
+    ("#1", "HYPERLIQUID", "HIP-4 builder, worldwide"),
     ("$1.1B+", "MARKET CAP", "combined"),
-    ("#1", "HYPERLIQUID", "builder, worldwide"),
     ("1M+", "MONTHLY ACTIVES", "across the work"),
 ]
 
@@ -280,10 +280,13 @@ LAYERS = [
                      "prism.predi.cc", "question.markets"]),
     ("INNOVATION", ["rfq.fi", "parlays.live", "parlayer.xyz", "hyperhedge",
                     "composites", "ide.finance", "globe.li"]),
-    # rendered as a dimmed single line, no chips - there is more underneath but
-    # the diagram has made its point by here
-    ("\u2026", ["AUTOMATION", "INTELLIGENCE", "PRODUCTIVITY TOOLING"]),
+    # real rows rather than one dim line - these layers exist, they are just
+    # not enumerated here
+    ("AUTOMATION", ["fleet", "predator-bots", "legion", "…"]),
+    ("INTELLIGENCE", ["everex.pro", "quants.run", "prism.predi.cc", "…"]),
+    ("PRODUCTIVITY", ["pro.", "laptime.dev", "this.poc.rocks", "…"]),
 ]
+TEASED = {"AUTOMATION", "INTELLIGENCE", "PRODUCTIVITY"}
 
 
 def stack(c):
@@ -291,7 +294,7 @@ def stack(c):
     line, so each row grows by however many lines it needs and the rows below
     shift down. Row heights are measured first, then drawn."""
     W, LEFT, RIGHT = 1200, 254, 1160
-    CHIP_H, LINE_H, PAD_TOP, GAP = 34, 44, 82, 13
+    CHIP_H, LINE_H, PAD_TOP, GAP = 34, 44, 46, 13
 
     def chip_w(t):
         return 17 + len(t) * 8.5
@@ -315,22 +318,16 @@ def stack(c):
         h = LINE_H * lines + 22
         layout.append((name, placed, y, h, lines))
         y += h
-    H = y - 12
+    H = y + 10
 
     out = []
     for li, (name, placed, y, h, lines) in enumerate(layout):
         d = 0.3 + li * 0.13
-        if name != "\u2026":
-            out.append(f'<text x="44" y="{y+26}" class="layer">{esc(name)}</text>')
+        lop = ' opacity=".55"' if name in TEASED else ''
+        out.append(f'<text x="44" y="{y+26}" class="layer"{lop}>{esc(name)}</text>')
         if li:
             out.append(f'<rect x="44" y="{y-12}" width="{W-88}" height="1" fill="{c["frame"]}" '
                        f'shape-rendering="crispEdges" class="fade-in"/>')
-        if name == "\u2026":                     # the fade-away row
-            out.append(f'<text x="44" y="{y+26}" class="layer" opacity=".45">&#8230;</text>')
-            # one string, so there is no per-item advance to get wrong
-            joined = esc(SEP.join(items))
-            out.append(f'<text x="254" y="{y+26}" class="faded">{joined}</text>')
-            continue
         derived = False
         for it, bx, line in placed:
             ly = y + 6 + LINE_H * line
@@ -339,14 +336,17 @@ def stack(c):
                 derived = True
                 continue
             w = chip_w(it)
+            teased = name in TEASED
             accent = (name == "INNOVATION") and not derived
             fill = c["panel"] if not accent else c["accent"]
             txt = c["text"] if not accent else ("#04070f" if c is DARK else "#ffffff")
             stroke = c["frame"] if not accent else c["accent"]
             out.append(f"""
   <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) {d:.2f}s both" class="needs-motion">
-    <rect x="{bx:.0f}" y="{ly}" width="{w:.0f}" height="{CHIP_H}" rx="6" fill="{fill}" stroke="{stroke}"/>
-    <text x="{bx + w/2:.0f}" y="{ly+22}" text-anchor="middle" class="chip" fill="{txt}">{esc(it)}</text>
+    <rect x="{bx:.0f}" y="{ly}" width="{w:.0f}" height="{CHIP_H}" rx="6" fill="{fill}" stroke="{stroke}"
+          opacity="{0.42 if teased else 1}"/>
+    <text x="{bx + w/2:.0f}" y="{ly+22}" text-anchor="middle" class="chip" fill="{txt}"
+          opacity="{0.55 if teased else 1}">{esc(it)}</text>
   </g>""")
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}"
      role="img" aria-label="{esc('The stack: ' + '; '.join(n + ': ' + ', '.join(i) for n, i in LAYERS))}">
@@ -360,7 +360,6 @@ def stack(c):
     {BASE_KEYFRAMES}{REDUCED}
   </style>
 {frame(c, W, H, 12.5)}
-  <text x="44" y="44" class="title">ONE STACK, NOT A PILE OF SIDE PROJECTS</text>
 {''.join(out)}
 </svg>
 """

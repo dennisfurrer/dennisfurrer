@@ -5,15 +5,15 @@
 -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/header-dark.svg?v=7">
-  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg?v=7">
-  <img alt="Dennis Furrer — founder, CTO. dfurrer.com" src="assets/header-dark.svg?v=7" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/header-dark.svg?v=8">
+  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg?v=8">
+  <img alt="Dennis Furrer — founder, CTO. dfurrer.com" src="assets/header-dark.svg?v=8" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/stats-dark.svg?v=7">
-  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg?v=7">
-  <img alt="5 companies taken 0→1 · $39M+ raised · $1.1B+ combined market cap · #1 Hyperliquid builder worldwide · 1M+ monthly actives" src="assets/stats-dark.svg?v=7" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/stats-dark.svg?v=8">
+  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg?v=8">
+  <img alt="5 companies taken 0→1 · $39M+ raised · $1.1B+ combined market cap · #1 Hyperliquid builder worldwide · 1M+ monthly actives" src="assets/stats-dark.svg?v=8" width="100%">
 </picture>
 
 ### Selected work
@@ -29,10 +29,16 @@
 | **laptime.dev** | Performance, security, privacy and SEO in one report card. Browser extension and CI included. | [`laptime.dev`](https://laptime.dev) |
 | **…** | Sixty-odd more, all from this year. | [`dfurrer.com/tools`](https://dfurrer.com/tools) |
 
+<a href="https://dfurrer.com/tools">
+  <img alt="dfurrer.com/tools — an infinite canvas of 66 tools, with globe.li and pro at the centre" src="assets/tools.webp?v=2" width="100%">
+</a>
+
+### My DeFi stack in 2026
+
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/stack-dark.svg?v=7">
-  <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg?v=7">
-  <img alt="The stack: 20+ integrations, then infrastructure, markets, aggregation and an innovation layer — with automation, intelligence and productivity tooling beneath." src="assets/stack-dark.svg?v=7" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/stack-dark.svg?v=8">
+  <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg?v=8">
+  <img alt="The stack: 20+ integrations, then infrastructure, markets, aggregation, innovation, and the automation, intelligence and productivity layers." src="assets/stack-dark.svg?v=8" width="100%">
 </picture>
 
 ### Open source
@@ -79,9 +85,9 @@ did not yet exist. The commit message reads *"Hyperliquid has not published the
 HIP-4 prediction markets API yet."*
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/firsts-dark.svg?v=7">
-  <source media="(prefers-color-scheme: light)" srcset="assets/firsts-light.svg?v=7">
-  <img alt="March 10 2026: HIP-4 goes live on Hyperliquid testnet at 15:32; working integration 17:41; working SDK 18:21; the first HIP-4 builder frontend in the world live at 19:12 — three hours forty minutes later; whitelabel market creation ships 21:43." src="assets/firsts-dark.svg?v=7" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/firsts-dark.svg?v=8">
+  <source media="(prefers-color-scheme: light)" srcset="assets/firsts-light.svg?v=8">
+  <img alt="March 10 2026: HIP-4 goes live on Hyperliquid testnet at 15:32; working integration 17:41; working SDK 18:21; the first HIP-4 builder frontend in the world live at 19:12 — three hours forty minutes later; whitelabel market creation ships 21:43." src="assets/firsts-dark.svg?v=8" width="100%">
 </picture>
 
 | | | |
@@ -104,12 +110,6 @@ Python and Go](#open-source), all open sourced rather than kept in-house. The
 first whitelabel platform on the standard. Top-3 builder worldwide twice; the
 platform now sits behind the #1 builder by volume and a peak-#3, now #6.
 
-
-### Everything else
-
-<a href="https://dfurrer.com/tools">
-  <img alt="dfurrer.com/tools — an infinite canvas of 65 tools, with globe.li and pro at the centre" src="assets/tools.webp?v=1" width="100%">
-</a>
 
 ---
 
