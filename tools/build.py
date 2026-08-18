@@ -166,7 +166,7 @@ def pro_panels(c, x, y, w, h):
 
 def header(c):
     W, H = 1200, 340
-    gx, gy, gr = 186, 182, 78
+    gx, gy, gr = 186, 170, 78
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}"
      role="img" aria-label="Dennis Furrer - founder, CTO. dfurrer.com.">
   <style>
@@ -198,14 +198,14 @@ def header(c):
   </defs>
 {frame(c, W, H)}
   <g class="late">{globe(c, gx, gy, gr)}</g>
-  <g class="late">{pro_panels(c, 918, 116, 200, 132)}</g>
-  <text x="{gx}" y="286" text-anchor="middle" class="micro">GLOBE.LI</text>
-  <text x="1018" y="286" text-anchor="middle" class="micro">PRO.</text>
+  <g class="late">{pro_panels(c, 918, 104, 200, 132)}</g>
+  <text x="{gx}" y="272" text-anchor="middle" class="micro">GLOBE.LI</text>
+  <text x="1018" y="272" text-anchor="middle" class="micro">PRO.</text>
 
-  <g class="fade-in">{mark(583, 44, 34)}</g>
-  <text class="name r1" x="600" y="200" text-anchor="middle">DENNIS<tspan fill="url(#ng)"> FURRER</tspan><tspan class="cur" fill="{c['accent2']}">_</tspan></text>
-  <rect class="rule" x="490" y="222" width="220" height="2"/>
-  <text class="micro fade-in" x="600" y="256" text-anchor="middle">DFURRER.COM</text>
+  <g class="fade-in">{mark(583, 34, 34)}</g>
+  <text class="name r1" x="600" y="176" text-anchor="middle">DENNIS<tspan fill="url(#ng)"> FURRER</tspan><tspan class="cur" fill="{c['accent2']}">_</tspan></text>
+  <rect class="rule" x="490" y="198" width="220" height="2"/>
+  <text class="micro fade-in" x="600" y="306" text-anchor="middle">DFURRER.COM</text>
 </svg>
 """
 
@@ -366,95 +366,7 @@ def stack(c):
 
 
 
-# ── 5. March 10 ─────────────────────────────────────────────────────────────
-# The single strongest proof point, so it gets its own graphic. Times are CET,
-# from the milestone record. The two quiet beats (17:06 alert, 17:31 work
-# starts) are in the README table but not here - at this scale they collide
-# with 17:41. Commits live in a private repo, so nothing is linked.
-FIRSTS = [
-    ("15:32", "testnet live", "Hyperliquid ships HIP-4", False),
-    ("17:41", "integration", "works", False),
-    ("18:21", "SDK", "works", False),
-    ("19:12", "frontend", "first in the world", True),
-    ("21:43", "whitelabel", "market creation ships", False),
-]
-
-
-def firsts(c):
-    W, H = 1200, 352
-    y = 214
-    x0, x1 = 100, 1120
-    t0, span = 15.0, 7.0            # 15:00 → 22:00
-
-    def px(hhmm):
-        h, m = hhmm.split(":")
-        return x0 + (int(h) + int(m) / 60 - t0) / span * (x1 - x0)
-
-    out = []
-    # 17:41, 18:21 and 19:12 sit within ~220px of each other, and the note line
-    # is far wider than the label - so the blocks alternate above and below the
-    # axis. Same-side neighbours are then 220px+ apart and cannot collide.
-    for i, (t, label, note, hero) in enumerate(FIRSTS):
-        x = px(t)
-        d = 1.0 + i * 0.18
-        col = c["accent2"] if hero else c["accent"]
-        r = 7 if hero else 5
-        up = i % 2 == 1
-        ly = y - 34 if up else y + 32          # label
-        ny = y - 52 if up else y + 50          # note
-        ty = y + 26 if up else y - 24          # time, opposite side
-        out.append(f"""
-  <g style="animation:fade .7s ease {d:.2f}s both" class="needs-motion">
-    <circle cx="{x:.1f}" cy="{y}" r="{r}" fill="{c['bg']}" stroke="{col}" stroke-width="2.4"/>
-    {'<circle cx="%.1f" cy="%d" r="2.4" fill="%s"/>' % (x, y, col) if hero else ''}
-    <text x="{x:.1f}" y="{ty}" text-anchor="middle" class="ft">{t}</text>
-    <text x="{x:.1f}" y="{ly}" text-anchor="middle" class="{'fl hero' if hero else 'fl'}">{esc(label)}</text>
-    <text x="{x:.1f}" y="{ny}" text-anchor="middle" class="fn">{esc(note)}</text>
-  </g>""")
-
-    a, b = px("15:32"), px("19:12")
-    bracket = f"""
-  <g style="animation:fade .8s ease 2.0s both" class="needs-motion">
-    <path d="M {a:.1f} {y+78} V {y+88} H {b:.1f} V {y+78}" fill="none" stroke="{c['accent']}" stroke-width="1.2" opacity=".7"/>
-    <text x="{(a+b)/2:.1f}" y="{y+108}" text-anchor="middle" class="fe">3H 40M &#183; CHAIN FEATURE &#8594; THE WORLD&#8217;S FIRST HIP-4 BUILDER FRONTEND</text>
-  </g>"""
-
-    ticks = "".join(
-        f'<text x="{x0 + i/span*(x1-x0):.1f}" y="{y-72}" text-anchor="middle" class="fg">{15+i}:00</text>'
-        for i in range(0, 8))
-
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}"
-     role="img" aria-label="{esc('March 10 2026: Hyperliquid ships HIP-4 to testnet at 15:32; working integration 17:41; working SDK 18:21; the first HIP-4 builder frontend in the world live at 19:12, three hours forty minutes later; whitelabel market creation 21:43.')}">
-  <style>
-    .ft {{ font-family:{MONO}; font-size:12.5px; letter-spacing:1.6px; fill:{c['accent']} }}
-    .fl {{ font-family:{DISPLAY}; font-size:17px; font-weight:600; letter-spacing:-.2px; fill:{c['text']} }}
-    .fl.hero {{ fill:{c['accent2']} }}
-    .fn {{ font-family:{MONO}; font-size:10.5px; letter-spacing:.8px; fill:{c['faint']} }}
-    .fg {{ font-family:{MONO}; font-size:9.5px; letter-spacing:1.4px; fill:{c['frame']} }}
-    .fe {{ font-family:{MONO}; font-size:11px; letter-spacing:2px; fill:{c['dim']} }}
-    .title{{ font-family:{MONO}; font-size:12px; letter-spacing:3.2px; fill:{c['faint']} }}
-    .pro {{ font-family:{MONO}; font-size:11.5px; letter-spacing:.6px; fill:{c['dim']} }}
-    .prok{{ font-family:{MONO}; font-size:11.5px; letter-spacing:1.6px; fill:{c['accent']} }}
-    .line{{ stroke:{c['frame']}; stroke-width:1.5; fill:none; stroke-dasharray:1020;
-            stroke-dashoffset:1020; animation:dash 2s cubic-bezier(.16,1,.3,1) .5s both }}
-    .fade-in {{ animation:fade 1.2s ease .25s both }}
-    {BASE_KEYFRAMES}{REDUCED}
-  </style>
-{frame(c, W, H, 12.5)}
-  <text x="44" y="44" class="title">MARCH 10, 2026 &#183; THE DAY HIP-4 OPENED</text>
-  <g class="fade-in">
-    <text x="44" y="86" class="prok">FEB 25</text>
-    <text x="108" y="86" class="pro">a 194-line HIP-4 adapter skeleton lands in the predictions SDK &#8212; written before Hyperliquid</text>
-    <text x="108" y="104" class="pro">had published any HIP-4 API at all. Thirteen days before testnet opened.</text>
-  </g>
-  <path class="line" d="M {x0} {y} H {x1}"/>
-{ticks}
-{''.join(out)}{bracket}
-</svg>
-"""
-
-
-BUILDERS = {"header": header, "stats": stats, "firsts": firsts, "stack": stack}
+BUILDERS = {"header": header, "stats": stats, "stack": stack}
 
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)

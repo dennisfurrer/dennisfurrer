@@ -5,15 +5,15 @@
 -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/header-dark.svg?v=8">
-  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg?v=8">
-  <img alt="Dennis Furrer — founder, CTO. dfurrer.com" src="assets/header-dark.svg?v=8" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/header-dark.svg?v=9">
+  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg?v=9">
+  <img alt="Dennis Furrer — founder, CTO. dfurrer.com" src="assets/header-dark.svg?v=9" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/stats-dark.svg?v=8">
-  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg?v=8">
-  <img alt="5 companies taken 0→1 · $39M+ raised · $1.1B+ combined market cap · #1 Hyperliquid builder worldwide · 1M+ monthly actives" src="assets/stats-dark.svg?v=8" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/stats-dark.svg?v=9">
+  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg?v=9">
+  <img alt="5 companies taken 0→1 · $39M+ raised · $1.1B+ combined market cap · #1 Hyperliquid builder worldwide · 1M+ monthly actives" src="assets/stats-dark.svg?v=9" width="100%">
 </picture>
 
 ### Selected work
@@ -21,7 +21,7 @@
 | | | |
 |:--|:--|:--|
 | **globe.li** | News-to-trade terminal integrating Hyperliquid, Polymarket, Limitless and Aster. 1M+ MAU, #1 of 569 on pm.wiki. | [`globe.li`](https://globe.li) |
-| **pro.** | A browser-native workspace where an idea becomes a shipped product without leaving the tab. Six tools — think, plan, design, code, collab and glass — on one account, one file system, and one agency of Claude sessions that reads a project's state off the work itself rather than off a status somebody typed. The chain is real and connected: a think board's diagram feeds a plan, the design system feeds the screens, an in-browser IDE bundles and previews live, and the dashboard lets you reach into any app mid-flight. glass is a Chrome extension that extends the same canvas over anybody else's page — a shared link carries the page and your drawings on it, auto-inviting whoever opens it. | [`pro.dfurrer.com`](https://pro.dfurrer.com) |
+| **pro.** | An idea traced to the thing that shipped. Six tools — think, plan, design, code, collab, glass — on one account, where changing something upstream flags everything below it stale. | [`pro.dfurrer.com`](https://pro.dfurrer.com) |
 | **perps.studio × hip4.dev** | First market on testnet, first SDK, first whitelabel platform, first market on mainnet. The SDK behind the #1 builder worldwide (outcome.xyz) and a peak-#3, now #6, builder (globe.li). Branded exchange live in five minutes. | [`perps.studio`](https://perps.studio) · [`hip4.dev`](https://hip4.dev) |
 | **outcome.xyz** | HIP-4 prediction markets on Hyperliquid. #1 builder by trading volume, worldwide. Launched 39 days after I joined. | [`outcome.xyz`](https://outcome.xyz) |
 | **app.builder.markets** | One merged book, routed to best execution. Hyperliquid, Aster and Lighter depth stacked into a single ladder with the arb called out in basis points. Predictions from Polymarket and Limitless priced against one fair-value model and grouped by what they are a bet on. HIP-3 perp DEX deployment, vaults and analytics in the same tab. | [`app.builder.markets`](https://app.builder.markets) |
@@ -36,89 +36,7 @@
 ### My DeFi stack in 2026
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/stack-dark.svg?v=8">
-  <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg?v=8">
-  <img alt="The stack: 20+ integrations, then infrastructure, markets, aggregation, innovation, and the automation, intelligence and productivity layers." src="assets/stack-dark.svg?v=8" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/stack-dark.svg?v=9">
+  <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg?v=9">
+  <img alt="The stack: 20+ integrations, then infrastructure, markets, aggregation, innovation, and the automation, intelligence and productivity layers." src="assets/stack-dark.svg?v=9" width="100%">
 </picture>
-
-### Open source
-
-The HIP-4 SDKs — first to ship, and still the only ones in four languages.
-
-| | | |
-|:--|:--|:--|
-| TypeScript | `@perps/hip4` | [npm](https://www.npmjs.com/package/@perps/hip4) |
-| Rust | `hip-4-rust` | [github](https://github.com/perps-studio/hip-4-rust) |
-| Python | `hip-4-python` | [github](https://github.com/perps-studio/hip-4-python) |
-| Go | `hip4-go` | [github](https://github.com/perps-studio/hip4-go) |
-
-And pro runs a public MCP server — 39 tools across sessions, documents, the
-board, checks and shipping. The agent and the person hit the same endpoints;
-a board only one of them obeys is not a board.
-
-```bash
-claude mcp add --transport http pro https://pro.dfurrer.com/api/mcp \
-  --header "Authorization: Bearer pro_..."
-```
-
-<details>
-<summary><b>Track record</b> — five companies from zero to one</summary>
-
-<br>
-
-| Where | Role | What |
-|:--|:--|:--|
-| **Outcome.xyz** | CTO | Hired to ship a team that hadn't. Launched 39 days later; now the #1 builder by trading volume, worldwide. |
-| **perps.studio** | Founder | White-label perps, spot and prediction markets. A branded exchange in five minutes. |
-| **Nika Finance** | CTO | Built the product and engineering org from scratch — internal POC through security-hardened V1. |
-| **Snag Solutions** | Founding engineer | Incepted a new vertical 0→1 into multi-million ARR. 2M+ monthly actives across dozens of clients. |
-| **Boson Protocol** | Founding engineer → Head of Engineering | First engineer. Built the product behind $39M+ raised and $1.1B+ of combined market cap; promoted four times, scaled the team to 65. |
-
-</details>
-
-### March 10, 2026
-
-Hyperliquid shipped HIP-4 to testnet at 15:32. The adapter had been written
-thirteen days earlier, from nothing — a 194-line skeleton in the predictions
-SDK, stub classes with descriptive errors, committed while the API it targeted
-did not yet exist. The commit message reads *"Hyperliquid has not published the
-HIP-4 prediction markets API yet."*
-
-<picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/firsts-dark.svg?v=8">
-  <source media="(prefers-color-scheme: light)" srcset="assets/firsts-light.svg?v=8">
-  <img alt="March 10 2026: HIP-4 goes live on Hyperliquid testnet at 15:32; working integration 17:41; working SDK 18:21; the first HIP-4 builder frontend in the world live at 19:12 — three hours forty minutes later; whitelabel market creation ships 21:43." src="assets/firsts-dark.svg?v=8" width="100%">
-</picture>
-
-| | | |
-|:--|:--|:--|
-| 15:32 | Hyperliquid testnet upgrades — HIP-4 is live | |
-| 17:06 | The demo app catches *markets not yet available* and alerts | |
-| 17:31 | Work starts on the Feb 25 adapter | |
-| **17:41** | **Working HIP-4 integration** | 2h 09 |
-| **18:21** | **Working HIP-4 SDK** | 2h 49 |
-| **19:12** | **First HIP-4 builder frontend in the world, live** | 3h 40 |
-| 21:43 | Whitelabel HIP-4 market creation ships to [perps.studio](https://perps.studio) | 6h 11 |
-
-**Three times the tooling was ready before the announcement was.** In February,
-the adapter — written against an API Hyperliquid had not published. On 10 March,
-the first HIP-4 builder frontend in the world, live the day testnet opened. And
-on mainnet, the first builder market, live a minute before it was announced.
-
-Then the first SDK, and the first in more than one language — [TypeScript, Rust,
-Python and Go](#open-source), all open sourced rather than kept in-house. The
-first whitelabel platform on the standard. Top-3 builder worldwide twice; the
-platform now sits behind the #1 builder by volume and a peak-#3, now #6.
-
-
----
-
-<p align="center">
-  <samp>
-    <a href="https://dfurrer.com">dfurrer.com</a>
-    &nbsp;·&nbsp;
-    <a href="https://dfurrer.com/tools">tools</a>
-    &nbsp;·&nbsp;
-    <a href="https://www.linkedin.com/in/dennisfurrer">linkedin</a>
-  </samp>
-</p>
