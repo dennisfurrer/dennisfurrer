@@ -30,12 +30,6 @@
 | **…** | Sixty-odd more, all from this year. | [`dfurrer.com/tools`](https://dfurrer.com/tools) |
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/arc-dark.svg?v=5">
-  <source media="(prefers-color-scheme: light)" srcset="assets/arc-light.svg?v=5">
-  <img alt="The 2026 arc: Apr 19 axis v0.1 → Apr 22 globe.li → May HIP-4 firsts → Jun perps.studio → Jul Everex → Aug builder.markets" src="assets/arc-dark.svg?v=5" width="100%">
-</picture>
-
-<picture>
   <source media="(prefers-color-scheme: dark)"  srcset="assets/stack-dark.svg?v=5">
   <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg?v=5">
   <img alt="The stack: 20+ integrations, the HIP-4 SDKs, perps.studio and what is built on it, outcome.xyz, the aggregators, and globe.li." src="assets/stack-dark.svg?v=5" width="100%">

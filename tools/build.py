@@ -227,58 +227,6 @@ def stats(c):
 """
 
 
-# ── 3. the 2026 arc ─────────────────────────────────────────────────────────
-ARC = [
-    ("MAR 10", "HIP-4 firsts", "integration, SDK, frontend"),
-    ("APR 19", "axis v0.1", "the first evening"),
-    ("APR 22", "globe.li", "still the current system"),
-
-    ("JUN", "perps.studio", "exchange in five minutes"),
-    ("JUL", "Everex", "ingest → backtest → signals"),
-    ("AUG", "builder.markets", "six venues, one book"),
-]
-
-
-def arc(c):
-    W, H = 1200, 256
-    y = 130
-    x0, x1 = 92, W - 92
-    step = (x1 - x0) / (len(ARC) - 1)
-    out = []
-    for i, (when, what, note) in enumerate(ARC):
-        x = x0 + step * i
-        d = 0.8 + i * 0.16
-        up = i % 2 == 0
-        ty = y - 30 if up else y + 46
-        ny = y - 48 if up else y + 64
-        out.append(f"""
-  <g style="animation:fade .8s ease {d:.2f}s both" class="needs-motion">
-    <circle cx="{x:.1f}" cy="{y}" r="5.5" fill="{c['bg']}" stroke="{c['accent']}" stroke-width="2"/>
-    <circle cx="{x:.1f}" cy="{y}" r="2" fill="{c['accent2']}"/>
-    <text x="{x:.1f}" y="{ty}" text-anchor="middle" class="what">{esc(what)}</text>
-    <text x="{x:.1f}" y="{ny}" text-anchor="middle" class="note">{esc(note)}</text>
-    <text x="{x:.1f}" y="{y + (20 if up else -12)}" text-anchor="middle" class="when">{esc(when)}</text>
-  </g>""")
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}"
-     role="img" aria-label="2026 arc: {'; '.join(f'{w} {t} - {n}' for w, t, n in ARC)}">
-  <style>
-    .what {{ font-family:{DISPLAY}; font-size:19.5px; font-weight:600; letter-spacing:-.2px; fill:{c['text']} }}
-    .note {{ font-family:{MONO}; font-size:11.5px; letter-spacing:1.2px; fill:{c['faint']} }}
-    .when {{ font-family:{MONO}; font-size:11.5px; letter-spacing:2px; fill:{c['accent']} }}
-    .title{{ font-family:{MONO}; font-size:12px; letter-spacing:3.2px; fill:{c['faint']} }}
-    .line {{ stroke:{c['accent']}; stroke-width:1.5; fill:none; stroke-dasharray:1020;
-             stroke-dashoffset:1020; animation:dash 2.2s cubic-bezier(.16,1,.3,1) .35s both }}
-    .fade-in {{ animation:fade 1.2s ease .25s both }}
-    {BASE_KEYFRAMES}{REDUCED}
-  </style>
-{frame(c, W, H, 12.5)}
-  <text x="44" y="42" class="title">THE 2026 ARC &#183; SIXTEEN WEEKS, BESIDE THE DAY JOB</text>
-  <path class="line" d="M {x0} {y} H {x1}"/>
-{''.join(out)}
-</svg>
-"""
-
-
 # ── 4. the stack ────────────────────────────────────────────────────────────
 # The trading stack only. pro., laptime.dev and this.poc.rocks are separate
 # products and deliberately not on this diagram.
@@ -459,7 +407,7 @@ def firsts(c):
 """
 
 
-BUILDERS = {"header": header, "stats": stats, "firsts": firsts, "arc": arc, "stack": stack}
+BUILDERS = {"header": header, "stats": stats, "firsts": firsts, "stack": stack}
 
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
