@@ -284,9 +284,8 @@ LAYERS = [
     # not enumerated here
     ("AUTOMATION", ["fleet", "predator-bots", "legion", "…"]),
     ("INTELLIGENCE", ["everex.pro", "quants.run", "prism.predi.cc", "…"]),
-    ("PRODUCTIVITY", ["pro.", "laptime.dev", "this.poc.rocks", "…"]),
 ]
-TEASED = {"AUTOMATION", "INTELLIGENCE", "PRODUCTIVITY"}
+TEASED = {"AUTOMATION", "INTELLIGENCE"}
 
 
 def stack(c):
