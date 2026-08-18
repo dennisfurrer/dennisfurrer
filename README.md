@@ -75,7 +75,7 @@ The HIP-4 SDKs — first to ship, and still the only ones in four languages.
 - First builder-deployed market on **testnet**, inside week one.
 - First **SDK**, and the first in more than one language — TypeScript, Python, Rust, Go.
 - First **whitelabel platform** on the standard.
-- First builder market on **mainnet**, a month before the official announcement.
+- First builder market on **mainnet**, a minute before the official announcement.
 - Top-3 builder globally, twice — from side projects, beside the day job.
 
 </details>

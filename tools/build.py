@@ -53,6 +53,27 @@ REDUCED = """
 """
 
 
+# The DFU mark, taken verbatim from the centered topnav on dfurrer.com so the
+# brand is identical across surfaces. Gradient id is namespaced per file.
+MARK_PATHS = ('<path d="M 130.37 116.16 L 145.3 100"/>'
+              '<path d="M 55.5 59.1 L 93.3 100 L 55.5 140.9"/>'
+              '<path d="M 148.5 59.1 L 110.7 100 L 148.5 140.9"/>')
+
+
+def mark(x, y, size, gid="dfu"):
+    k = size / 200.0
+    return (f'<g transform="translate({x},{y}) scale({k:.4f})" '
+            f'stroke="url(#{gid})" stroke-width="15" stroke-linecap="round" '
+            f'stroke-linejoin="round" fill="none">{MARK_PATHS}</g>')
+
+
+def mark_grad(gid="dfu"):
+    return (f'<linearGradient id="{gid}" x1="30%" y1="0%" x2="70%" y2="100%">'
+            f'<stop offset="0%" stop-color="#dfe8ff"/>'
+            f'<stop offset="55%" stop-color="#9fb4e8"/>'
+            f'<stop offset="100%" stop-color="#c7d3f5"/></linearGradient>')
+
+
 def frame(c, w, h, inset=16.5):
     """Editorial hairline frame with corner crosshairs - carried over from the
     original header, which was the one thing worth keeping."""
@@ -74,7 +95,7 @@ def frame(c, w, h, inset=16.5):
 # ── 1. header ───────────────────────────────────────────────────────────────
 def header(c):
     W, H = 1200, 340
-    cx, cy, R = 985, 170, 104
+    cx, cy, R = 952, 176, 97
 
     # Fibonacci sphere, orthographic. Same construction as the WebGL field on
     # dfurrer.com - the point of the motif is that it is the same object.
@@ -124,22 +145,23 @@ def header(c):
       <stop offset="55%" stop-color="{c['accent']}"/>
       <stop offset="100%" stop-color="{c['deep']}"/>
     </linearGradient>
+    {mark_grad()}
   </defs>
 {frame(c, W, H)}
-  <ellipse cx="{cx}" cy="{cy}" rx="210" ry="185" fill="url(#hg)" class="halo"/>
+  <ellipse cx="{cx}" cy="{cy}" rx="172" ry="150" fill="url(#hg)" class="halo"/>
   <g class="orb late">{sphere}</g>
 
+  <g class="fade-in">{mark(66, 44, 38)}</g>
   <g class="micro fade-in">
-    <text x="44" y="50">FOUNDER &#183; CTO</text>
-    <text x="1156" y="50" text-anchor="end">10Y IN WEB3</text>
-    <text x="44" y="308">ZERO &#8594; ONE, END TO END</text>
-    <text x="1156" y="308" text-anchor="end">DFURRER.COM</text>
+    <text x="116" y="70">FOUNDER &#183; CTO &#183; 10Y IN WEB3</text>
+    <text x="66" y="306">ZERO &#8594; ONE, END TO END</text>
+    <text x="1134" y="306" text-anchor="end">DFURRER.COM</text>
   </g>
 
-  <text class="name r1" x="64" y="168">DENNIS<tspan fill="url(#ng)"> FURRER</tspan><tspan class="cur" fill="{c['accent2']}">_</tspan></text>
-  <rect class="rule" x="66" y="196" width="240" height="2"/>
-  <text class="role r2" x="66" y="238">DISTRIBUTED SYSTEMS &#183; LOW LATENCY</text>
-  <text class="role r2" x="66" y="262">CONSUMER APPS &#183; WHITELABEL PLATFORMS</text>
+  <text class="name r1" x="66" y="176">DENNIS<tspan fill="url(#ng)"> FURRER</tspan><tspan class="cur" fill="{c['accent2']}">_</tspan></text>
+  <rect class="rule" x="66" y="198" width="232" height="2"/>
+  <text class="role r2" x="66" y="230">DISTRIBUTED SYSTEMS &#183; LOW LATENCY</text>
+  <text class="role r2" x="66" y="252">CONSUMER APPS &#183; WHITELABEL PLATFORMS</text>
 </svg>
 """
 
@@ -239,18 +261,22 @@ def arc(c):
 
 
 # ── 4. the stack ────────────────────────────────────────────────────────────
+# The trading stack only. pro., laptime.dev and this.poc.rocks are separate
+# products and deliberately not on this diagram.
+# "→" renders as a built-on arrow rather than a chip.
 LAYERS = [
     ("VENUES", ["Hyperliquid", "Aster", "Polymarket", "Limitless", "Lighter"]),
     ("PROTOCOL", ["hip4.dev  ·  TS / Rust / Python / Go"]),
-    ("INFRASTRUCTURE", ["perps.studio", "outcome.xyz", "Everex"]),
+    ("INFRASTRUCTURE", ["perps.studio", "→", "Everex", "OMEN"]),
+    ("MARKETS", ["outcome.xyz"]),
     ("AGGREGATION", ["builder.markets", "parlayer.xyz", "ide.finance"]),
-    ("SURFACE", ["globe.li", "pro.", "laptime.dev", "this.poc.rocks"]),
+    ("TERMINAL", ["globe.li"]),
 ]
 
 
 def stack(c):
     W = 1200
-    rowh, top = 80, 84
+    rowh, top = 74, 82
     H = top + rowh * len(LAYERS) - 18
     out = []
     for li, (name, items) in enumerate(LAYERS):
@@ -261,9 +287,15 @@ def stack(c):
             out.append(f'<rect x="44" y="{y-14}" width="{W-88}" height="1" fill="{c["frame"]}" '
                        f'shape-rendering="crispEdges" class="fade-in"/>')
         bx = 254
+        derived = False
         for it in items:
+            if it == "\u2192":                       # built-on marker
+                out.append(f'<text x="{bx+9:.0f}" y="{y+28}" class="arrow">&#8594;</text>')
+                bx += 30
+                derived = True
+                continue
             w = 17 + len(it) * 8.5
-            accent = li in (1, 4)
+            accent = li in (1, len(LAYERS) - 1) and not derived
             fill = c["panel"] if not accent else c["accent"]
             txt = c["text"] if not accent else ("#04070f" if c is DARK else "#ffffff")
             stroke = c["frame"] if not accent else c["accent"]
@@ -278,6 +310,7 @@ def stack(c):
   <style>
     .layer{{ font-family:{MONO}; font-size:12px; letter-spacing:2.8px; fill:{c['faint']} }}
     .chip {{ font-family:{MONO}; font-size:13.5px; letter-spacing:.4px }}
+    .arrow{{ font-family:{MONO}; font-size:15px; fill:{c['accent']} }}
     .title{{ font-family:{MONO}; font-size:12px; letter-spacing:3.2px; fill:{c['faint']} }}
     .fade-in {{ animation:fade 1.2s ease .3s both }}
     {BASE_KEYFRAMES}{REDUCED}
