@@ -5,15 +5,15 @@
 -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/header-dark.svg?v=2">
-  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg?v=2">
-  <img alt="Dennis Furrer — founder, CTO. Distributed systems, low latency, consumer apps, whitelabel platforms." src="assets/header-dark.svg?v=2" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/header-dark.svg?v=3">
+  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg?v=3">
+  <img alt="Dennis Furrer — founder, CTO. Distributed systems, low latency, consumer apps, whitelabel platforms." src="assets/header-dark.svg?v=3" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/stats-dark.svg?v=2">
-  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg?v=2">
-  <img alt="1M+ monthly actives on globe.li · #1 of 569 on pm.wiki · 4 SDK languages · 5 companies taken 0→1 · 65 tools shipped in 2026" src="assets/stats-dark.svg?v=2" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/stats-dark.svg?v=3">
+  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg?v=3">
+  <img alt="1M+ monthly actives on globe.li · #1 of 569 on pm.wiki · 4 SDK languages · 5 companies taken 0→1 · 65 tools shipped in 2026" src="assets/stats-dark.svg?v=3" width="100%">
 </picture>
 
 ### Selected work
@@ -30,15 +30,15 @@
 | **…** | Sixty-odd more, all from this year. | [`dfurrer.com/tools`](https://dfurrer.com/tools) |
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/arc-dark.svg?v=2">
-  <source media="(prefers-color-scheme: light)" srcset="assets/arc-light.svg?v=2">
-  <img alt="The 2026 arc: Apr 19 axis v0.1 → Apr 22 globe.li → May HIP-4 firsts → Jun perps.studio → Jul Everex → Aug builder.markets" src="assets/arc-dark.svg?v=2" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/arc-dark.svg?v=3">
+  <source media="(prefers-color-scheme: light)" srcset="assets/arc-light.svg?v=3">
+  <img alt="The 2026 arc: Apr 19 axis v0.1 → Apr 22 globe.li → May HIP-4 firsts → Jun perps.studio → Jul Everex → Aug builder.markets" src="assets/arc-dark.svg?v=3" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/stack-dark.svg?v=2">
-  <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg?v=2">
-  <img alt="The stack: venues, protocol SDKs, infrastructure, aggregation, surface." src="assets/stack-dark.svg?v=2" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/stack-dark.svg?v=3">
+  <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg?v=3">
+  <img alt="The stack: venues, protocol SDKs, infrastructure, aggregation, surface." src="assets/stack-dark.svg?v=3" width="100%">
 </picture>
 
 ### Open source
