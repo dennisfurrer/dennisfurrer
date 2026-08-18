@@ -213,5 +213,5 @@
   <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.82s both" class="needs-motion">
     <rect x="952" y="396" width="85" height="34" rx="6" fill="#5d8bff" stroke="#5d8bff"/>
     <text x="995" y="418" text-anchor="middle" class="chip" fill="#04070f">globe.li</text>
-  </g><rect x="44" y="444" width="1112" height="1" fill="#1b2440" shape-rendering="crispEdges" class="fade-in"/><text x="44" y="482" class="layer" opacity=".45">&#8230;</text><text x="254" y="482" class="faded">AUTOMATION</text><text x="356.0" y="482" class="faded">INTELLIGENCE</text><text x="474.4" y="482" class="faded">PRODUCTIVITY TOOLING</text>
+  </g><rect x="44" y="444" width="1112" height="1" fill="#1b2440" shape-rendering="crispEdges" class="fade-in"/><text x="44" y="482" class="layer" opacity=".45">&#8230;</text><text x="254" y="482" class="faded">AUTOMATION  ·  INTELLIGENCE  ·  PRODUCTIVITY TOOLING</text>
 </svg>

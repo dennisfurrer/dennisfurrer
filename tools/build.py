@@ -31,6 +31,7 @@ LIGHT = dict(
 
 DISPLAY = ('-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", '
            'Inter, Helvetica, Arial, sans-serif')
+SEP = "  \u00b7  "
 MONO = ('ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", '
         '"Roboto Mono", Menlo, Consolas, monospace')
 
@@ -326,8 +327,8 @@ def stack(c):
         if name == "\u2026":                     # the fade-away row
             out.append(f'<text x="44" y="{y+26}" class="layer" opacity=".45">&#8230;</text>')
             # one string, so there is no per-item advance to get wrong
-            out.append(f'<text x="254" y="{y+26}" class="faded">'
-                       f'{esc("  \u00b7  ".join(items))}</text>')
+            joined = esc(SEP.join(items))
+            out.append(f'<text x="254" y="{y+26}" class="faded">{joined}</text>')
             continue
         derived = False
         for it, bx, line in placed:
