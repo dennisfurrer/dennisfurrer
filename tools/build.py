@@ -100,52 +100,92 @@ def frame(c, w, h, inset=16.5):
 
 
 # ── 1. header ───────────────────────────────────────────────────────────────
-def header(c):
-    W, H = 1200, 340
-    cx, cy, R = 600, 182, 112
-
-    # Fibonacci sphere, orthographic. Same construction as the WebGL field on
-    # dfurrer.com - the point of the motif is that it is the same object.
-    pts, N = [], 260
+# Globe left, pro right, name between them - nothing sits behind the type.
+# The globe is drawn the way globe.li draws it: graticule wireframe, event
+# markers, great-circle arcs, rather than a generic particle ball.
+def globe(c, cx, cy, R):
+    o = []
+    o.append(f'<circle cx="{cx}" cy="{cy}" r="{R}" fill="url(#gsphere)"/>')
+    # latitude rings
+    for lat in (-60, -30, 0, 30, 60):
+        rr = R * math.cos(math.radians(lat))
+        yy = cy - R * math.sin(math.radians(lat))
+        o.append(f'<ellipse cx="{cx}" cy="{yy:.1f}" rx="{rr:.1f}" ry="{rr*0.26:.1f}" '
+                 f'fill="none" stroke="{c["accent"]}" stroke-width="0.7" opacity="{0.5 if lat==0 else 0.26}"/>')
+    # meridians
+    for k in range(6):
+        rx = abs(R * math.cos(math.pi * k / 6))
+        o.append(f'<ellipse cx="{cx}" cy="{cy}" rx="{max(rx,0.6):.1f}" ry="{R}" '
+                 f'fill="none" stroke="{c["accent"]}" stroke-width="0.7" opacity=".22"/>')
+    o.append(f'<circle cx="{cx}" cy="{cy}" r="{R}" fill="none" stroke="{c["accent2"]}" '
+             f'stroke-width="1.1" opacity=".55"/>')
+    # event markers, front hemisphere only, and arcs between a few of them
+    pts, N = [], 130
     ga = math.pi * (3 - math.sqrt(5))
     for i in range(N):
-        y = 1 - 2 * (i + 0.5) / N
-        rad = math.sqrt(max(0.0, 1 - y * y))
+        yv = 1 - 2 * (i + 0.5) / N
+        rad = math.sqrt(max(0.0, 1 - yv * yv))
         th = i * ga
-        pts.append((math.cos(th) * rad, y, math.sin(th) * rad))
-
-    dots = []
+        x, z = math.cos(th) * rad, math.sin(th) * rad
+        if z < 0.02:
+            continue
+        pts.append((cx + x * R, cy - yv * R, z))
     for (x, y, z) in pts:
-        depth = (z + 1) / 2                      # 0 back .. 1 front
-        r = 0.7 + depth * 1.5
-        o = 0.10 + depth * 0.72
-        col = c["accent2"] if depth > 0.80 else c["accent"]
-        dots.append(f'<circle cx="{cx + x*R:.1f}" cy="{cy - y*R:.1f}" '
-                    f'r="{r:.2f}" fill="{col}" opacity="{o:.2f}"/>')
-    sphere = "".join(dots)
+        o.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{0.6+z*0.9:.2f}" '
+                 f'fill="{c["dim"]}" opacity="{0.10+z*0.34:.2f}"/>')
+    hot = [pts[i] for i in (7, 23, 41, 58, 74) if i < len(pts)]
+    for i, (x, y, z) in enumerate(hot):
+        o.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3.4" fill="#ffb648" opacity=".9"/>')
+        o.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="6.5" fill="none" stroke="#ffb648" '
+                 f'stroke-width="1" opacity=".35" class="ping" style="animation-delay:{i*0.7:.1f}s"/>')
+    for i in range(len(hot) - 1):
+        x1, y1, _ = hot[i]; x2, y2, _ = hot[i + 1]
+        mx, my = (x1 + x2) / 2, (y1 + y2) / 2 - abs(x2 - x1) * 0.42 - 8
+        o.append(f'<path d="M {x1:.1f} {y1:.1f} Q {mx:.1f} {my:.1f} {x2:.1f} {y2:.1f}" '
+                 f'fill="none" stroke="{c["accent2"]}" stroke-width="1" opacity=".5"/>')
+    return "".join(o)
 
+
+def pro_panels(c, x, y, w, h):
+    """The pro workspace: four panels in one tab. Same shape as the real thing."""
+    o, gap = [], 8
+    pw, ph = (w - gap) / 2, (h - gap) / 2
+    for i, name in enumerate(("collab", "design", "plan", "code")):
+        px_ = x + (i % 2) * (pw + gap)
+        py_ = y + (i // 2) * (ph + gap)
+        o.append(f'<rect x="{px_:.0f}" y="{py_:.0f}" width="{pw:.0f}" height="{ph:.0f}" rx="5" '
+                 f'fill="{c["panel"]}" stroke="{c["frame"]}"/>')
+        o.append(f'<rect x="{px_:.0f}" y="{py_:.0f}" width="{pw:.0f}" height="13" rx="5" fill="{c["frame"]}" opacity=".55"/>')
+        for d in range(3):
+            o.append(f'<circle cx="{px_+9+d*7:.0f}" cy="{py_+6.5:.0f}" r="1.7" fill="{c["faint"]}" opacity=".8"/>')
+        o.append(f'<text x="{px_+pw/2:.0f}" y="{py_+ph/2+8:.0f}" text-anchor="middle" class="pn">{name}</text>')
+    return "".join(o)
+
+
+def header(c):
+    W, H = 1200, 340
+    gx, gy, gr = 186, 182, 78
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}"
-     role="img" aria-label="Dennis Furrer - founder, CTO. Zero to one, end to end.">
+     role="img" aria-label="Dennis Furrer - founder, CTO. dfurrer.com.">
   <style>
-    .name {{ font-family:{DISPLAY}; font-size:56px; font-weight:600; letter-spacing:11px; fill:{c['text']} }}
-    .role {{ font-family:{MONO}; font-size:15.5px; letter-spacing:4.6px; fill:{c['dim']} }}
+    .name {{ font-family:{DISPLAY}; font-size:50px; font-weight:600; letter-spacing:9px; fill:{c['text']} }}
     .micro{{ font-family:{MONO}; font-size:12px; letter-spacing:3.4px; fill:{c['faint']} }}
+    .pn   {{ font-family:{MONO}; font-size:11px; letter-spacing:.6px; fill:{c['dim']} }}
     .rule {{ fill:{c['accent']}; transform-origin:center; transform-box:fill-box;
              animation:draw 1.15s cubic-bezier(.16,1,.3,1) .5s both }}
     .r1   {{ animation:rise 1s cubic-bezier(.16,1,.3,1) .10s both }}
-    .r2   {{ animation:rise 1s cubic-bezier(.16,1,.3,1) .70s both }}
     .fade-in {{ animation:fade 1.3s ease .25s both }}
-    .late {{ animation:fade 1.5s ease 1.0s both }}
+    .late {{ animation:fade 1.5s ease .9s both }}
     .cur  {{ animation:blink 1.15s steps(1) 2s infinite both }}
-    .orb  {{ transform-origin:{cx}px {cy}px; animation:spin 64s linear infinite }}
-    .halo {{ animation:drift 7s ease-in-out infinite }}
+    .ping {{ animation:ping 3.2s ease-out infinite }}
+    @keyframes ping {{ 0% {{ transform:scale(.5); opacity:.6 }} 70%,100% {{ transform:scale(1.5); opacity:0 }} }}
     {BASE_KEYFRAMES}{REDUCED}
   </style>
   <defs>
-    <radialGradient id="hg" cx="50%" cy="50%">
-      <stop offset="0%"  stop-color="{c['accent']}" stop-opacity="{c['glow']}"/>
-      <stop offset="60%" stop-color="{c['accent']}" stop-opacity=".05"/>
-      <stop offset="100%" stop-color="{c['accent']}" stop-opacity="0"/>
+    <radialGradient id="gsphere" cx="38%" cy="32%">
+      <stop offset="0%" stop-color="{c['accent']}" stop-opacity=".30"/>
+      <stop offset="70%" stop-color="{c['bg']}" stop-opacity=".85"/>
+      <stop offset="100%" stop-color="{c['bg']}" stop-opacity=".98"/>
     </radialGradient>
     <linearGradient id="ng" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="{c['accent2']}"/>
@@ -153,24 +193,17 @@ def header(c):
       <stop offset="100%" stop-color="{c['deep']}"/>
     </linearGradient>
     {mark_grad()}
-    <radialGradient id="scrim" cx="50%" cy="50%">
-      <stop offset="0%" stop-color="{c['bg']}" stop-opacity=".82"/>
-      <stop offset="55%" stop-color="{c['bg']}" stop-opacity=".42"/>
-      <stop offset="100%" stop-color="{c['bg']}" stop-opacity="0"/>
-    </radialGradient>
   </defs>
 {frame(c, W, H)}
-  <ellipse cx="{cx}" cy="{cy}" rx="300" ry="158" fill="url(#hg)" class="halo"/>
-  <g class="orb late">{sphere}</g>
-  <ellipse cx="600" cy="200" rx="330" ry="62" fill="url(#scrim)" class="fade-in"/>
+  <g class="late">{globe(c, gx, gy, gr)}</g>
+  <g class="late">{pro_panels(c, 918, 126, 200, 112)}</g>
+  <text x="{gx}" y="286" text-anchor="middle" class="micro">GLOBE.LI</text>
+  <text x="1018" y="286" text-anchor="middle" class="micro">PRO.</text>
 
-  <g class="fade-in">{mark(583, 40, 34)}</g>
-
-  <text class="name r1" x="600" y="196" text-anchor="middle">DENNIS<tspan fill="url(#ng)"> FURRER</tspan><tspan class="cur" fill="{c['accent2']}">_</tspan></text>
-  <rect class="rule" x="484" y="218" width="232" height="2"/>
-  <text class="role r2" x="600" y="252" text-anchor="middle">DISTRIBUTED SYSTEMS &#183; LOW LATENCY</text>
-  <text class="role r2" x="600" y="274" text-anchor="middle">CONSUMER APPS &#183; WHITELABEL PLATFORMS</text>
-  <text class="micro fade-in" x="600" y="308" text-anchor="middle">DFURRER.COM</text>
+  <g class="fade-in">{mark(583, 44, 34)}</g>
+  <text class="name r1" x="600" y="200" text-anchor="middle">DENNIS<tspan fill="url(#ng)"> FURRER</tspan><tspan class="cur" fill="{c['accent2']}">_</tspan></text>
+  <rect class="rule" x="490" y="222" width="220" height="2"/>
+  <text class="micro fade-in" x="600" y="256" text-anchor="middle">DFURRER.COM</text>
 </svg>
 """
 
@@ -182,7 +215,6 @@ STATS = [
     ("$1.1B+", "MARKET CAP", "combined"),
     ("#1", "HYPERLIQUID", "builder, worldwide"),
     ("1M+", "MONTHLY ACTIVES", "across the work"),
-    ("20+", "DEFI INTEGRATIONS", "venues & protocols"),
 ]
 
 
@@ -238,11 +270,17 @@ INTEGRATIONS = [
 ]
 LAYERS = [
     ("INTEGRATIONS", INTEGRATIONS),
-    ("PROTOCOL", ["hip4.dev  ·  TS / Rust / Python / Go"]),
-    ("INFRASTRUCTURE", ["perps.studio", "→", "Everex", "OMEN"]),
-    ("MARKETS", ["outcome.xyz"]),
-    ("AGGREGATION", ["builder.markets", "parlayer.xyz", "ide.finance"]),
-    ("TERMINAL", ["globe.li"]),
+    ("INFRASTRUCTURE", ["hip4 SDKs", "perps.studio", "rwas.studio", "prps.app",
+                        "predict.prps.app", "spot.prps.app"]),
+    ("MARKETS", ["outcome.xyz", "everex.pro", "vyper.rekt.fi", "omen.predi.cc",
+                 "predict.perps.studio", "+ many more"]),
+    ("AGGREGATION", ["globe.li", "app.builder.markets", "ide.finance", "tr8.wtf",
+                     "prism.predi.cc", "question.markets"]),
+    ("INNOVATION", ["rfq.fi", "parlays.live", "parlayer.xyz", "hyperhedge",
+                    "composites", "ide.finance", "globe.li"]),
+    # rendered as a dimmed single line, no chips - there is more underneath but
+    # the diagram has made its point by here
+    ("\u2026", ["AUTOMATION", "INTELLIGENCE", "PRODUCTIVITY TOOLING"]),
 ]
 
 
@@ -280,10 +318,17 @@ def stack(c):
     out = []
     for li, (name, placed, y, h, lines) in enumerate(layout):
         d = 0.3 + li * 0.13
-        out.append(f'<text x="44" y="{y+26}" class="layer">{esc(name)}</text>')
+        if name != "\u2026":
+            out.append(f'<text x="44" y="{y+26}" class="layer">{esc(name)}</text>')
         if li:
             out.append(f'<rect x="44" y="{y-12}" width="{W-88}" height="1" fill="{c["frame"]}" '
                        f'shape-rendering="crispEdges" class="fade-in"/>')
+        if name == "\u2026":                     # the fade-away row
+            out.append(f'<text x="44" y="{y+26}" class="layer" opacity=".45">&#8230;</text>')
+            # one string, so there is no per-item advance to get wrong
+            out.append(f'<text x="254" y="{y+26}" class="faded">'
+                       f'{esc("  \u00b7  ".join(items))}</text>')
+            continue
         derived = False
         for it, bx, line in placed:
             ly = y + 6 + LINE_H * line
@@ -292,7 +337,7 @@ def stack(c):
                 derived = True
                 continue
             w = chip_w(it)
-            accent = li in (1, len(LAYERS) - 1) and not derived
+            accent = (name == "INNOVATION") and not derived
             fill = c["panel"] if not accent else c["accent"]
             txt = c["text"] if not accent else ("#04070f" if c is DARK else "#ffffff")
             stroke = c["frame"] if not accent else c["accent"]
@@ -307,6 +352,7 @@ def stack(c):
     .layer{{ font-family:{MONO}; font-size:12px; letter-spacing:2.8px; fill:{c['faint']} }}
     .chip {{ font-family:{MONO}; font-size:13.5px; letter-spacing:.4px }}
     .arrow{{ font-family:{MONO}; font-size:15px; fill:{c['accent']} }}
+    .faded{{ font-family:{MONO}; font-size:12px; letter-spacing:2.4px; fill:{c['faint']}; opacity:.5 }}
     .title{{ font-family:{MONO}; font-size:12px; letter-spacing:3.2px; fill:{c['faint']} }}
     .fade-in {{ animation:fade 1.2s ease .3s both }}
     {BASE_KEYFRAMES}{REDUCED}

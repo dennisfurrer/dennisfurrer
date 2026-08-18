@@ -1,9 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 510" width="1200" height="510"
-     role="img" aria-label="The stack: INTEGRATIONS: Hyperliquid, Polymarket, Kalshi, Limitless, Metaculus, Myriad, Manifold, Lighter, Aster, Arcus, Uniswap, Jupiter, 1inch, 0x, Relay, LiFi, deBridge, Across, OogaBooga, yield.xyz; PROTOCOL: hip4.dev  ·  TS / Rust / Python / Go; INFRASTRUCTURE: perps.studio, →, Everex, OMEN; MARKETS: outcome.xyz; AGGREGATION: builder.markets, parlayer.xyz, ide.finance; TERMINAL: globe.li">
+     role="img" aria-label="The stack: INTEGRATIONS: Hyperliquid, Polymarket, Kalshi, Limitless, Metaculus, Myriad, Manifold, Lighter, Aster, Arcus, Uniswap, Jupiter, 1inch, 0x, Relay, LiFi, deBridge, Across, OogaBooga, yield.xyz; INFRASTRUCTURE: hip4 SDKs, perps.studio, rwas.studio, prps.app, predict.prps.app, spot.prps.app; MARKETS: outcome.xyz, everex.pro, vyper.rekt.fi, omen.predi.cc, predict.perps.studio, + many more; AGGREGATION: globe.li, app.builder.markets, ide.finance, tr8.wtf, prism.predi.cc, question.markets; INNOVATION: rfq.fi, parlays.live, parlayer.xyz, hyperhedge, composites, ide.finance, globe.li; …: AUTOMATION, INTELLIGENCE, PRODUCTIVITY TOOLING">
   <style>
     .layer{ font-family:ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size:12px; letter-spacing:2.8px; fill:#7d8bae }
     .chip { font-family:ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size:13.5px; letter-spacing:.4px }
     .arrow{ font-family:ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size:15px; fill:#3f6fe2 }
+    .faded{ font-family:ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size:12px; letter-spacing:2.4px; fill:#7d8bae; opacity:.5 }
     .title{ font-family:ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size:12px; letter-spacing:3.2px; fill:#7d8bae }
     .fade-in { animation:fade 1.2s ease .3s both }
     
@@ -112,41 +113,105 @@
   <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.30s both" class="needs-motion">
     <rect x="1047" y="132" width="94" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
     <text x="1094" y="154" text-anchor="middle" class="chip" fill="#0c1330">yield.xyz</text>
-  </g><text x="44" y="218" class="layer">PROTOCOL</text><rect x="44" y="180" width="1112" height="1" fill="#d7e0f4" shape-rendering="crispEdges" class="fade-in"/>
+  </g><text x="44" y="218" class="layer">INFRASTRUCTURE</text><rect x="44" y="180" width="1112" height="1" fill="#d7e0f4" shape-rendering="crispEdges" class="fade-in"/>
   <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.43s both" class="needs-motion">
-    <rect x="254" y="198" width="323" height="34" rx="6" fill="#3f6fe2" stroke="#3f6fe2"/>
-    <text x="416" y="220" text-anchor="middle" class="chip" fill="#ffffff">hip4.dev  ·  TS / Rust / Python / Go</text>
-  </g><text x="44" y="284" class="layer">INFRASTRUCTURE</text><rect x="44" y="246" width="1112" height="1" fill="#d7e0f4" shape-rendering="crispEdges" class="fade-in"/>
+    <rect x="254" y="198" width="94" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="301" y="220" text-anchor="middle" class="chip" fill="#0c1330">hip4 SDKs</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.43s both" class="needs-motion">
+    <rect x="360" y="198" width="119" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="420" y="220" text-anchor="middle" class="chip" fill="#0c1330">perps.studio</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.43s both" class="needs-motion">
+    <rect x="492" y="198" width="110" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="548" y="220" text-anchor="middle" class="chip" fill="#0c1330">rwas.studio</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.43s both" class="needs-motion">
+    <rect x="616" y="198" width="85" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="658" y="220" text-anchor="middle" class="chip" fill="#0c1330">prps.app</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.43s both" class="needs-motion">
+    <rect x="714" y="198" width="153" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="790" y="220" text-anchor="middle" class="chip" fill="#0c1330">predict.prps.app</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.43s both" class="needs-motion">
+    <rect x="880" y="198" width="128" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="944" y="220" text-anchor="middle" class="chip" fill="#0c1330">spot.prps.app</text>
+  </g><text x="44" y="284" class="layer">MARKETS</text><rect x="44" y="246" width="1112" height="1" fill="#d7e0f4" shape-rendering="crispEdges" class="fade-in"/>
   <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.56s both" class="needs-motion">
-    <rect x="254" y="264" width="119" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
-    <text x="314" y="286" text-anchor="middle" class="chip" fill="#0c1330">perps.studio</text>
-  </g><text x="395" y="286" class="arrow">&#8594;</text>
-  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.56s both" class="needs-motion">
-    <rect x="416" y="264" width="68" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
-    <text x="450" y="286" text-anchor="middle" class="chip" fill="#0c1330">Everex</text>
+    <rect x="254" y="264" width="110" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="309" y="286" text-anchor="middle" class="chip" fill="#0c1330">outcome.xyz</text>
   </g>
   <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.56s both" class="needs-motion">
-    <rect x="497" y="264" width="51" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
-    <text x="522" y="286" text-anchor="middle" class="chip" fill="#0c1330">OMEN</text>
-  </g><text x="44" y="350" class="layer">MARKETS</text><rect x="44" y="312" width="1112" height="1" fill="#d7e0f4" shape-rendering="crispEdges" class="fade-in"/>
+    <rect x="378" y="264" width="102" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="428" y="286" text-anchor="middle" class="chip" fill="#0c1330">everex.pro</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.56s both" class="needs-motion">
+    <rect x="492" y="264" width="128" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="556" y="286" text-anchor="middle" class="chip" fill="#0c1330">vyper.rekt.fi</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.56s both" class="needs-motion">
+    <rect x="633" y="264" width="128" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="697" y="286" text-anchor="middle" class="chip" fill="#0c1330">omen.predi.cc</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.56s both" class="needs-motion">
+    <rect x="774" y="264" width="187" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="867" y="286" text-anchor="middle" class="chip" fill="#0c1330">predict.perps.studio</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.56s both" class="needs-motion">
+    <rect x="974" y="264" width="110" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="1029" y="286" text-anchor="middle" class="chip" fill="#0c1330">+ many more</text>
+  </g><text x="44" y="350" class="layer">AGGREGATION</text><rect x="44" y="312" width="1112" height="1" fill="#d7e0f4" shape-rendering="crispEdges" class="fade-in"/>
   <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.69s both" class="needs-motion">
-    <rect x="254" y="330" width="110" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
-    <text x="309" y="352" text-anchor="middle" class="chip" fill="#0c1330">outcome.xyz</text>
-  </g><text x="44" y="416" class="layer">AGGREGATION</text><rect x="44" y="378" width="1112" height="1" fill="#d7e0f4" shape-rendering="crispEdges" class="fade-in"/>
+    <rect x="254" y="330" width="85" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="296" y="352" text-anchor="middle" class="chip" fill="#0c1330">globe.li</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.69s both" class="needs-motion">
+    <rect x="352" y="330" width="178" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="441" y="352" text-anchor="middle" class="chip" fill="#0c1330">app.builder.markets</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.69s both" class="needs-motion">
+    <rect x="544" y="330" width="110" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="599" y="352" text-anchor="middle" class="chip" fill="#0c1330">ide.finance</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.69s both" class="needs-motion">
+    <rect x="667" y="330" width="76" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="705" y="352" text-anchor="middle" class="chip" fill="#0c1330">tr8.wtf</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.69s both" class="needs-motion">
+    <rect x="756" y="330" width="136" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="824" y="352" text-anchor="middle" class="chip" fill="#0c1330">prism.predi.cc</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.69s both" class="needs-motion">
+    <rect x="906" y="330" width="153" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="982" y="352" text-anchor="middle" class="chip" fill="#0c1330">question.markets</text>
+  </g><text x="44" y="416" class="layer">INNOVATION</text><rect x="44" y="378" width="1112" height="1" fill="#d7e0f4" shape-rendering="crispEdges" class="fade-in"/>
   <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.82s both" class="needs-motion">
-    <rect x="254" y="396" width="144" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
-    <text x="326" y="418" text-anchor="middle" class="chip" fill="#0c1330">builder.markets</text>
+    <rect x="254" y="396" width="68" height="34" rx="6" fill="#3f6fe2" stroke="#3f6fe2"/>
+    <text x="288" y="418" text-anchor="middle" class="chip" fill="#ffffff">rfq.fi</text>
   </g>
   <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.82s both" class="needs-motion">
-    <rect x="412" y="396" width="119" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
-    <text x="471" y="418" text-anchor="middle" class="chip" fill="#0c1330">parlayer.xyz</text>
+    <rect x="335" y="396" width="119" height="34" rx="6" fill="#3f6fe2" stroke="#3f6fe2"/>
+    <text x="394" y="418" text-anchor="middle" class="chip" fill="#ffffff">parlays.live</text>
   </g>
   <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.82s both" class="needs-motion">
-    <rect x="544" y="396" width="110" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
-    <text x="599" y="418" text-anchor="middle" class="chip" fill="#0c1330">ide.finance</text>
-  </g><text x="44" y="482" class="layer">TERMINAL</text><rect x="44" y="444" width="1112" height="1" fill="#d7e0f4" shape-rendering="crispEdges" class="fade-in"/>
-  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.95s both" class="needs-motion">
-    <rect x="254" y="462" width="85" height="34" rx="6" fill="#3f6fe2" stroke="#3f6fe2"/>
-    <text x="296" y="484" text-anchor="middle" class="chip" fill="#ffffff">globe.li</text>
+    <rect x="467" y="396" width="119" height="34" rx="6" fill="#3f6fe2" stroke="#3f6fe2"/>
+    <text x="526" y="418" text-anchor="middle" class="chip" fill="#ffffff">parlayer.xyz</text>
   </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.82s both" class="needs-motion">
+    <rect x="599" y="396" width="102" height="34" rx="6" fill="#3f6fe2" stroke="#3f6fe2"/>
+    <text x="650" y="418" text-anchor="middle" class="chip" fill="#ffffff">hyperhedge</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.82s both" class="needs-motion">
+    <rect x="714" y="396" width="102" height="34" rx="6" fill="#3f6fe2" stroke="#3f6fe2"/>
+    <text x="765" y="418" text-anchor="middle" class="chip" fill="#ffffff">composites</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.82s both" class="needs-motion">
+    <rect x="829" y="396" width="110" height="34" rx="6" fill="#3f6fe2" stroke="#3f6fe2"/>
+    <text x="884" y="418" text-anchor="middle" class="chip" fill="#ffffff">ide.finance</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.82s both" class="needs-motion">
+    <rect x="952" y="396" width="85" height="34" rx="6" fill="#3f6fe2" stroke="#3f6fe2"/>
+    <text x="995" y="418" text-anchor="middle" class="chip" fill="#ffffff">globe.li</text>
+  </g><rect x="44" y="444" width="1112" height="1" fill="#d7e0f4" shape-rendering="crispEdges" class="fade-in"/><text x="44" y="482" class="layer" opacity=".45">&#8230;</text><text x="254" y="482" class="faded">AUTOMATION</text><text x="356.0" y="482" class="faded">INTELLIGENCE</text><text x="474.4" y="482" class="faded">PRODUCTIVITY TOOLING</text>
 </svg>

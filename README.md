@@ -5,15 +5,15 @@
 -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/header-dark.svg?v=5">
-  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg?v=5">
-  <img alt="Dennis Furrer — founder, CTO. Distributed systems, low latency, consumer apps, whitelabel platforms." src="assets/header-dark.svg?v=5" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/header-dark.svg?v=6">
+  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg?v=6">
+  <img alt="Dennis Furrer — founder, CTO. dfurrer.com" src="assets/header-dark.svg?v=6" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/stats-dark.svg?v=5">
-  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg?v=5">
-  <img alt="5 companies taken 0→1 · $39M+ raised · $1.1B+ combined market cap · #1 Hyperliquid builder worldwide · 1M+ monthly actives · 20+ DeFi integrations" src="assets/stats-dark.svg?v=5" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/stats-dark.svg?v=6">
+  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg?v=6">
+  <img alt="5 companies taken 0→1 · $39M+ raised · $1.1B+ combined market cap · #1 Hyperliquid builder worldwide · 1M+ monthly actives" src="assets/stats-dark.svg?v=6" width="100%">
 </picture>
 
 ### Selected work
@@ -24,15 +24,15 @@
 | **pro.** | Think, plan, design, code and collab in one tab — and an MCP server, so one prompt runs the pipeline and hands back a deployed URL. | [`pro.dfurrer.com`](https://pro.dfurrer.com) |
 | **perps.studio × hip4.dev** | First market on testnet, first SDK, first whitelabel platform, first market on mainnet. The SDK behind the #1 builder worldwide (outcome.xyz) and a peak-#3, now #6, builder (globe.li). Branded exchange live in five minutes. | [`perps.studio`](https://perps.studio) · [`hip4.dev`](https://hip4.dev) |
 | **outcome.xyz** | HIP-4 prediction markets on Hyperliquid. #1 builder by trading volume, worldwide. Launched 39 days after I joined. | [`outcome.xyz`](https://outcome.xyz) |
-| **builder.markets** | Merged order book, best-execution routing across six venues. | [`app.builder.markets`](https://app.builder.markets) |
-| **parlayer.xyz** | Multi-venue parlays: copula pricing, hard solvency invariant. | [`parlayer.xyz`](https://parlayer.xyz) |
+| **app.builder.markets** | One merged book, routed to best execution. Hyperliquid, Aster and Lighter depth stacked into a single ladder with the arb called out in basis points. Predictions from Polymarket and Limitless priced against one fair-value model and grouped by what they are a bet on. HIP-3 perp DEX deployment, vaults and analytics in the same tab. | [`app.builder.markets`](https://app.builder.markets) |
+| **parlayer.xyz** | Multi-venue parlays — Hyperliquid, Polymarket and Limitless legs in one slip. Copula pricing, hard solvency invariant. | [`parlayer.xyz`](https://parlayer.xyz) |\n| **rfq.fi** | Peer-to-peer OTC for custom outcome risk. Define an outcome, source live quotes from many desks, execute one gasless order — fractional fills matched across counterparties, settled on-chain. | [`rfq.fi`](https://rfq.fi) |
 | **laptime.dev** | Performance, security, privacy and SEO in one report card. Browser extension and CI included. | [`laptime.dev`](https://laptime.dev) |
 | **…** | Sixty-odd more, all from this year. | [`dfurrer.com/tools`](https://dfurrer.com/tools) |
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/stack-dark.svg?v=5">
-  <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg?v=5">
-  <img alt="The stack: 20+ integrations, the HIP-4 SDKs, perps.studio and what is built on it, outcome.xyz, the aggregators, and globe.li." src="assets/stack-dark.svg?v=5" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/stack-dark.svg?v=6">
+  <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg?v=6">
+  <img alt="The stack: 20+ integrations, then infrastructure, markets, aggregation and an innovation layer — with automation, intelligence and productivity tooling beneath." src="assets/stack-dark.svg?v=6" width="100%">
 </picture>
 
 ### Open source
@@ -70,9 +70,9 @@ did not yet exist. The commit message reads *"Hyperliquid has not published the
 HIP-4 prediction markets API yet."*
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/firsts-dark.svg?v=5">
-  <source media="(prefers-color-scheme: light)" srcset="assets/firsts-light.svg?v=5">
-  <img alt="March 10 2026: HIP-4 goes live on Hyperliquid testnet at 15:32; working integration 17:41; working SDK 18:21; the first HIP-4 builder frontend in the world live at 19:12 — three hours forty minutes later; whitelabel market creation ships 21:43." src="assets/firsts-dark.svg?v=5" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/firsts-dark.svg?v=6">
+  <source media="(prefers-color-scheme: light)" srcset="assets/firsts-light.svg?v=6">
+  <img alt="March 10 2026: HIP-4 goes live on Hyperliquid testnet at 15:32; working integration 17:41; working SDK 18:21; the first HIP-4 builder frontend in the world live at 19:12 — three hours forty minutes later; whitelabel market creation ships 21:43." src="assets/firsts-dark.svg?v=6" width="100%">
 </picture>
 
 | | | |
