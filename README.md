@@ -33,19 +33,19 @@
   <img alt="dfurrer.com/tools - an infinite canvas of 66 tools, with globe.li and pro at the centre" src="assets/tools.webp?v=2" width="100%">
 </a>
 
-### pro - prompt to deployed URL
+### pro - prompt to product
 
-One pass, no approval gates, no manual deploy step, no auth prompt halfway
-through. It mindmaps the problem in **think**, breaks that into a
-maximally-concurrent schedule in **plan**, produces a component library in
-**design**, exports it into **code** as a Storybook with tests, builds the app
-there, proves it with Playwright, screenshots and logical assertions, ships it
-to Cloudflare, and hands back the URL. You can watch it work and interrupt at
-any point. You don't have to.
+Two value propositions.
+(1) You share your idea, via a single prompt, and within minutes receive a
+notification with the URL at which the finished solution is deployed. No
+approval gates, no manual deploy step, no auth prompt halfway through.
+(2) Augment your workflow and team with the professional product tooling
+provided here. Mindmaps, targeted & structured research, ux design, software
+development, interactive testing, live collaboration with people and/or agents.
+Taste becomes the differentiator.
+The tools offer backwards and forwards compatibility with industry standard
+solutions including Miro, Figma, VS Code, JIRA, and more. 
 
-The other half is that you can ignore all of that and use it as six tuned
-office tools. File compatibility runs both ways, so it is an addition rather
-than a migration.
 
 | | replaces | reads / writes |
 |:--|:--|:--|
