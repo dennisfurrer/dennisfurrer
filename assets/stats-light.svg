@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 168" width="1200" height="168"
+     role="img" aria-label="1M+ MONTHLY ACTIVES (globe.li) - #1 OF 569 ON PM.WIKI (globe.li) - 4 SDK LANGUAGES (hip4.dev) - 5 COMPANIES 0→1 (founding / C-level) - 65 TOOLS SHIPPED (in 2026)">
+  <style>
+    .big { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Inter, Helvetica, Arial, sans-serif; font-size:46px; font-weight:600; letter-spacing:-1px; fill:#0c1330 }
+    .lab { font-family:ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size:12px; letter-spacing:2.6px; fill:#46557a }
+    .sub { font-family:ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size:11px; letter-spacing:1.6px; fill:#7d8bae }
+    .fade-in { animation:fade 1.2s ease .3s both }
+    
+    @keyframes rise  { from { opacity:0; transform:translateY(10px) } to { opacity:1; transform:none } }
+    @keyframes fade  { from { opacity:0 } to { opacity:1 } }
+    @keyframes draw  { from { transform:scaleX(0) } to { transform:scaleX(1) } }
+    @keyframes blink { 0%,54% { opacity:1 } 55%,100% { opacity:0 } }
+    @keyframes spin  { to { transform:rotate(360deg) } }
+    @keyframes drift { 0%,100% { transform:translateY(0) } 50% { transform:translateY(-3px) } }
+    @keyframes dash  { to { stroke-dashoffset:0 } }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important }
+      .needs-motion { opacity: 1 !important; transform: none !important }
+    }
+
+  </style>
+
+  <rect width="1200" height="168" fill="#f7f9ff"/>
+  <rect x="12.5" y="12.5" width="1174.0" height="142.0" fill="none"
+        stroke="#d7e0f4" stroke-width="1" shape-rendering="crispEdges"/>
+  <g fill="none" stroke="#b4c3e4" stroke-width="1" shape-rendering="crispEdges" class="fade-in">
+    <path d="M 12.5 4.0 V 21.0 M 4.0 12.5 H 21.0"/>
+    <path d="M 1187.5 4.0 V 21.0 M 1179.0 12.5 H 1196.0"/>
+    <path d="M 12.5 147.0 V 164.0 M 4.0 155.5 H 21.0"/>
+    <path d="M 1187.5 147.0 V 164.0 M 1179.0 155.5 H 1196.0"/>
+  </g>
+
+  <g style="animation:rise .95s cubic-bezier(.16,1,.3,1) 0.25s both" class="needs-motion">
+    <text x="155.2" y="80" text-anchor="middle" class="big">1M+</text>
+    <text x="155.2" y="110" text-anchor="middle" class="lab">MONTHLY ACTIVES</text>
+    <text x="155.2" y="132" text-anchor="middle" class="sub">globe.li</text>
+  </g>
+  <g style="animation:rise .95s cubic-bezier(.16,1,.3,1) 0.36s both" class="needs-motion">
+    <text x="377.6" y="80" text-anchor="middle" class="big">#1</text>
+    <text x="377.6" y="110" text-anchor="middle" class="lab">OF 569 ON PM.WIKI</text>
+    <text x="377.6" y="132" text-anchor="middle" class="sub">globe.li</text>
+  </g><rect x="266.4" y="48" width="1" height="76" fill="#d7e0f4" class="fade-in" shape-rendering="crispEdges"/>
+  <g style="animation:rise .95s cubic-bezier(.16,1,.3,1) 0.47s both" class="needs-motion">
+    <text x="600.0" y="80" text-anchor="middle" class="big">4</text>
+    <text x="600.0" y="110" text-anchor="middle" class="lab">SDK LANGUAGES</text>
+    <text x="600.0" y="132" text-anchor="middle" class="sub">hip4.dev</text>
+  </g><rect x="488.8" y="48" width="1" height="76" fill="#d7e0f4" class="fade-in" shape-rendering="crispEdges"/>
+  <g style="animation:rise .95s cubic-bezier(.16,1,.3,1) 0.58s both" class="needs-motion">
+    <text x="822.4" y="80" text-anchor="middle" class="big">5</text>
+    <text x="822.4" y="110" text-anchor="middle" class="lab">COMPANIES 0→1</text>
+    <text x="822.4" y="132" text-anchor="middle" class="sub">founding / C-level</text>
+  </g><rect x="711.2" y="48" width="1" height="76" fill="#d7e0f4" class="fade-in" shape-rendering="crispEdges"/>
+  <g style="animation:rise .95s cubic-bezier(.16,1,.3,1) 0.69s both" class="needs-motion">
+    <text x="1044.8" y="80" text-anchor="middle" class="big">65</text>
+    <text x="1044.8" y="110" text-anchor="middle" class="lab">TOOLS SHIPPED</text>
+    <text x="1044.8" y="132" text-anchor="middle" class="sub">in 2026</text>
+  </g><rect x="933.6" y="48" width="1" height="76" fill="#d7e0f4" class="fade-in" shape-rendering="crispEdges"/>
+</svg>

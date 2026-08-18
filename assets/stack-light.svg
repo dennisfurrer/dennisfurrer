@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 466" width="1200" height="466"
+     role="img" aria-label="The stack: VENUES: Hyperliquid, Aster, Polymarket, Limitless, Lighter; PROTOCOL: hip4.dev  ·  TS / Rust / Python / Go; INFRASTRUCTURE: perps.studio, outcome.xyz, Everex; AGGREGATION: builder.markets, parlayer.xyz, ide.finance; SURFACE: globe.li, pro., laptime.dev, this.poc.rocks">
+  <style>
+    .layer{ font-family:ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size:12px; letter-spacing:2.8px; fill:#7d8bae }
+    .chip { font-family:ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size:13.5px; letter-spacing:.4px }
+    .title{ font-family:ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size:12px; letter-spacing:3.2px; fill:#7d8bae }
+    .fade-in { animation:fade 1.2s ease .3s both }
+    
+    @keyframes rise  { from { opacity:0; transform:translateY(10px) } to { opacity:1; transform:none } }
+    @keyframes fade  { from { opacity:0 } to { opacity:1 } }
+    @keyframes draw  { from { transform:scaleX(0) } to { transform:scaleX(1) } }
+    @keyframes blink { 0%,54% { opacity:1 } 55%,100% { opacity:0 } }
+    @keyframes spin  { to { transform:rotate(360deg) } }
+    @keyframes drift { 0%,100% { transform:translateY(0) } 50% { transform:translateY(-3px) } }
+    @keyframes dash  { to { stroke-dashoffset:0 } }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important }
+      .needs-motion { opacity: 1 !important; transform: none !important }
+    }
+
+  </style>
+
+  <rect width="1200" height="466" fill="#f7f9ff"/>
+  <rect x="12.5" y="12.5" width="1174.0" height="440.0" fill="none"
+        stroke="#d7e0f4" stroke-width="1" shape-rendering="crispEdges"/>
+  <g fill="none" stroke="#b4c3e4" stroke-width="1" shape-rendering="crispEdges" class="fade-in">
+    <path d="M 12.5 4.0 V 21.0 M 4.0 12.5 H 21.0"/>
+    <path d="M 1187.5 4.0 V 21.0 M 1179.0 12.5 H 1196.0"/>
+    <path d="M 12.5 445.0 V 462.0 M 4.0 453.5 H 21.0"/>
+    <path d="M 1187.5 445.0 V 462.0 M 1179.0 453.5 H 1196.0"/>
+  </g>
+  <text x="44" y="44" class="title">ONE STACK, NOT A PILE OF SIDE PROJECTS</text>
+<text x="44" y="110" class="layer">VENUES</text>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.30s both" class="needs-motion">
+    <rect x="254" y="90" width="110" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="309" y="112" text-anchor="middle" class="chip" fill="#0c1330">Hyperliquid</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.30s both" class="needs-motion">
+    <rect x="378" y="90" width="60" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="407" y="112" text-anchor="middle" class="chip" fill="#0c1330">Aster</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.30s both" class="needs-motion">
+    <rect x="450" y="90" width="102" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="501" y="112" text-anchor="middle" class="chip" fill="#0c1330">Polymarket</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.30s both" class="needs-motion">
+    <rect x="565" y="90" width="94" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="612" y="112" text-anchor="middle" class="chip" fill="#0c1330">Limitless</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.30s both" class="needs-motion">
+    <rect x="672" y="90" width="76" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="710" y="112" text-anchor="middle" class="chip" fill="#0c1330">Lighter</text>
+  </g><text x="44" y="190" class="layer">PROTOCOL</text><rect x="44" y="150" width="1112" height="1" fill="#d7e0f4" shape-rendering="crispEdges" class="fade-in"/>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.44s both" class="needs-motion">
+    <rect x="254" y="170" width="323" height="34" rx="6" fill="#3f6fe2" stroke="#3f6fe2"/>
+    <text x="416" y="192" text-anchor="middle" class="chip" fill="#ffffff">hip4.dev  ·  TS / Rust / Python / Go</text>
+  </g><text x="44" y="270" class="layer">INFRASTRUCTURE</text><rect x="44" y="230" width="1112" height="1" fill="#d7e0f4" shape-rendering="crispEdges" class="fade-in"/>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.58s both" class="needs-motion">
+    <rect x="254" y="250" width="119" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="314" y="272" text-anchor="middle" class="chip" fill="#0c1330">perps.studio</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.58s both" class="needs-motion">
+    <rect x="386" y="250" width="110" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="441" y="272" text-anchor="middle" class="chip" fill="#0c1330">outcome.xyz</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.58s both" class="needs-motion">
+    <rect x="510" y="250" width="68" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="544" y="272" text-anchor="middle" class="chip" fill="#0c1330">Everex</text>
+  </g><text x="44" y="350" class="layer">AGGREGATION</text><rect x="44" y="310" width="1112" height="1" fill="#d7e0f4" shape-rendering="crispEdges" class="fade-in"/>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.72s both" class="needs-motion">
+    <rect x="254" y="330" width="144" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="326" y="352" text-anchor="middle" class="chip" fill="#0c1330">builder.markets</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.72s both" class="needs-motion">
+    <rect x="412" y="330" width="119" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="471" y="352" text-anchor="middle" class="chip" fill="#0c1330">parlayer.xyz</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.72s both" class="needs-motion">
+    <rect x="544" y="330" width="110" height="34" rx="6" fill="#ffffff" stroke="#d7e0f4"/>
+    <text x="599" y="352" text-anchor="middle" class="chip" fill="#0c1330">ide.finance</text>
+  </g><text x="44" y="430" class="layer">SURFACE</text><rect x="44" y="390" width="1112" height="1" fill="#d7e0f4" shape-rendering="crispEdges" class="fade-in"/>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.86s both" class="needs-motion">
+    <rect x="254" y="410" width="85" height="34" rx="6" fill="#3f6fe2" stroke="#3f6fe2"/>
+    <text x="296" y="432" text-anchor="middle" class="chip" fill="#ffffff">globe.li</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.86s both" class="needs-motion">
+    <rect x="352" y="410" width="51" height="34" rx="6" fill="#3f6fe2" stroke="#3f6fe2"/>
+    <text x="378" y="432" text-anchor="middle" class="chip" fill="#ffffff">pro.</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.86s both" class="needs-motion">
+    <rect x="416" y="410" width="110" height="34" rx="6" fill="#3f6fe2" stroke="#3f6fe2"/>
+    <text x="471" y="432" text-anchor="middle" class="chip" fill="#ffffff">laptime.dev</text>
+  </g>
+  <g style="animation:rise .9s cubic-bezier(.16,1,.3,1) 0.86s both" class="needs-motion">
+    <rect x="540" y="410" width="136" height="34" rx="6" fill="#3f6fe2" stroke="#3f6fe2"/>
+    <text x="608" y="432" text-anchor="middle" class="chip" fill="#ffffff">this.poc.rocks</text>
+  </g>
+</svg>
