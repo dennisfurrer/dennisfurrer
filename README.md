@@ -21,7 +21,7 @@
 | | | |
 |:--|:--|:--|
 | **globe.li** | News-to-trade terminal integrating Hyperliquid, Polymarket, Limitless and Aster. 1M+ MAU, #1 of 569 on pm.wiki. | [`globe.li`](https://globe.li) |
-| **pro.** | An idea traced to the thing that shipped. Six tools — think, plan, design, code, collab, glass — on one account, where changing something upstream flags everything below it stale. | [`pro.dfurrer.com`](https://pro.dfurrer.com) |
+| **pro.** | A prompt becomes a deployed URL in one pass — and six tuned tools that read and write the formats your team already uses. More below. | [`pro.dfurrer.com`](https://pro.dfurrer.com) |
 | **perps.studio × hip4.dev** | First market on testnet, first SDK, first whitelabel platform, first market on mainnet. The SDK behind the #1 builder worldwide (outcome.xyz) and a peak-#3, now #6, builder (globe.li). Branded exchange live in five minutes. | [`perps.studio`](https://perps.studio) · [`hip4.dev`](https://hip4.dev) |
 | **outcome.xyz** | HIP-4 prediction markets on Hyperliquid. #1 builder by trading volume, worldwide. Launched 39 days after I joined. | [`outcome.xyz`](https://outcome.xyz) |
 | **app.builder.markets** | One merged book, routed to best execution. Hyperliquid, Aster and Lighter depth stacked into a single ladder with the arb called out in basis points. Predictions from Polymarket and Limitless priced against one fair-value model and grouped by what they are a bet on. HIP-3 perp DEX deployment, vaults and analytics in the same tab. | [`app.builder.markets`](https://app.builder.markets) |
@@ -32,6 +32,38 @@
 <a href="https://dfurrer.com/tools">
   <img alt="dfurrer.com/tools — an infinite canvas of 66 tools, with globe.li and pro at the centre" src="assets/tools.webp?v=2" width="100%">
 </a>
+
+### pro — prompt to deployed URL
+
+One pass, no approval gates, no manual deploy step, no auth prompt halfway
+through. It mindmaps the problem in **think**, breaks that into a
+maximally-concurrent schedule in **plan**, produces a component library in
+**design**, exports it into **code** as a Storybook with tests, builds the app
+there, proves it with Playwright, screenshots and logical assertions, ships it
+to Cloudflare, and hands back the URL. You can watch it work and interrupt at
+any point. You don't have to.
+
+The other half is that you can ignore all of that and use it as six tuned
+office tools. File compatibility runs both ways, so it is an addition rather
+than a migration.
+
+| | replaces | reads / writes |
+|:--|:--|:--|
+| **think** | Miro | Mermaid, SVG, PNG, JSON |
+| **plan** | Jira | Jira CSV, round-trip — epics ↔ milestones, blocks links, statuses |
+| **design** | Figma | exports a Figma kit, design tokens as JSON |
+| **code** | VS Code / Cursor | imports from GitHub and Storybook, builds a Storybook, exports a zip |
+| **collab** | your org chart | — |
+| **glass** | — | a browser extension that puts the canvas over anybody else's page |
+
+**collab is your agency, not a chat room**, and it scales down to one. It can be
+just you; you and a colleague, with live cursor-sharing across every app; a
+whole team; or agents you define with a role and a brief, running on whichever
+model. Mix them: hire into the gaps your team actually has, set the reporting
+structure inside that org, and automate what shouldn't need a person.
+
+**glass** extends the same canvas over any page in the browser, so a shared link
+carries the page *and* the drawings on it, auto-inviting whoever opens it.
 
 ### My DeFi stack in 2026
 
