@@ -5,15 +5,15 @@
 -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/header-dark.svg?v=4">
-  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg?v=4">
-  <img alt="Dennis Furrer — founder, CTO. Distributed systems, low latency, consumer apps, whitelabel platforms." src="assets/header-dark.svg?v=4" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/header-dark.svg?v=5">
+  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg?v=5">
+  <img alt="Dennis Furrer — founder, CTO. Distributed systems, low latency, consumer apps, whitelabel platforms." src="assets/header-dark.svg?v=5" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/stats-dark.svg?v=4">
-  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg?v=4">
-  <img alt="5 companies taken 0→1 · $39M+ raised · $1.1B+ combined market cap · #1 Hyperliquid builder worldwide · 1M+ monthly actives · 20+ DeFi integrations" src="assets/stats-dark.svg?v=4" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/stats-dark.svg?v=5">
+  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg?v=5">
+  <img alt="5 companies taken 0→1 · $39M+ raised · $1.1B+ combined market cap · #1 Hyperliquid builder worldwide · 1M+ monthly actives · 20+ DeFi integrations" src="assets/stats-dark.svg?v=5" width="100%">
 </picture>
 
 ### Selected work
@@ -30,15 +30,15 @@
 | **…** | Sixty-odd more, all from this year. | [`dfurrer.com/tools`](https://dfurrer.com/tools) |
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/arc-dark.svg?v=4">
-  <source media="(prefers-color-scheme: light)" srcset="assets/arc-light.svg?v=4">
-  <img alt="The 2026 arc: Apr 19 axis v0.1 → Apr 22 globe.li → May HIP-4 firsts → Jun perps.studio → Jul Everex → Aug builder.markets" src="assets/arc-dark.svg?v=4" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/arc-dark.svg?v=5">
+  <source media="(prefers-color-scheme: light)" srcset="assets/arc-light.svg?v=5">
+  <img alt="The 2026 arc: Apr 19 axis v0.1 → Apr 22 globe.li → May HIP-4 firsts → Jun perps.studio → Jul Everex → Aug builder.markets" src="assets/arc-dark.svg?v=5" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/stack-dark.svg?v=4">
-  <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg?v=4">
-  <img alt="The stack: 20+ integrations, the HIP-4 SDKs, perps.studio and what is built on it, outcome.xyz, the aggregators, and globe.li." src="assets/stack-dark.svg?v=4" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/stack-dark.svg?v=5">
+  <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg?v=5">
+  <img alt="The stack: 20+ integrations, the HIP-4 SDKs, perps.studio and what is built on it, outcome.xyz, the aggregators, and globe.li." src="assets/stack-dark.svg?v=5" width="100%">
 </picture>
 
 ### Open source
@@ -67,18 +67,40 @@ The HIP-4 SDKs — first to ship, and still the only ones in four languages.
 
 </details>
 
-<details>
-<summary><b>HIP-4</b> — what "first" actually means</summary>
+### March 10, 2026
 
-<br>
+Hyperliquid shipped HIP-4 to testnet at 15:32. The adapter had been written
+thirteen days earlier, from nothing — a 194-line skeleton in the predictions
+SDK, stub classes with descriptive errors, committed while the API it targeted
+did not yet exist. The commit message reads *"Hyperliquid has not published the
+HIP-4 prediction markets API yet."*
 
-- First builder-deployed market on **testnet**, inside week one.
-- First **SDK**, and the first in more than one language — TypeScript, Python, Rust, Go.
-- First **whitelabel platform** on the standard.
-- First builder market on **mainnet**, a minute before the official announcement.
-- Top-3 builder globally, twice — from side projects, beside the day job.
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/firsts-dark.svg?v=5">
+  <source media="(prefers-color-scheme: light)" srcset="assets/firsts-light.svg?v=5">
+  <img alt="March 10 2026: HIP-4 goes live on Hyperliquid testnet at 15:32; working integration 17:41; working SDK 18:21; the first HIP-4 builder frontend in the world live at 19:12 — three hours forty minutes later; whitelabel market creation ships 21:43." src="assets/firsts-dark.svg?v=5" width="100%">
+</picture>
 
-</details>
+| | | |
+|:--|:--|:--|
+| 15:32 | Hyperliquid testnet upgrades — HIP-4 is live | |
+| 17:06 | The demo app catches *markets not yet available* and alerts | |
+| 17:31 | Work starts on the Feb 25 adapter | |
+| **17:41** | **Working HIP-4 integration** | 2h 09 |
+| **18:21** | **Working HIP-4 SDK** | 2h 49 |
+| **19:12** | **First HIP-4 builder frontend in the world, live** | 3h 40 |
+| 21:43 | Whitelabel HIP-4 market creation ships to [perps.studio](https://perps.studio) | 6h 11 |
+
+**Three times the tooling was ready before the announcement was.** In February,
+the adapter — written against an API Hyperliquid had not published. On 10 March,
+the first HIP-4 builder frontend in the world, live the day testnet opened. And
+on mainnet, the first builder market, live a minute before it was announced.
+
+Then the first SDK, and the first in more than one language — [TypeScript, Rust,
+Python and Go](#open-source), all open sourced rather than kept in-house. The
+first whitelabel platform on the standard. Top-3 builder worldwide twice; the
+platform now sits behind the #1 builder by volume and a peak-#3, now #6.
+
 
 ---
 

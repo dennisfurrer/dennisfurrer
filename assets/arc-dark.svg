@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 256" width="1200" height="256"
-     role="img" aria-label="2026 arc: APR 19 axis v0.1 - the first evening; APR 22 globe.li - still the current system; MAY HIP-4 firsts - testnet market, first SDK; JUN perps.studio - exchange in five minutes; JUL Everex - ingest → backtest → signals; AUG builder.markets - six venues, one book">
+     role="img" aria-label="2026 arc: MAR 10 HIP-4 firsts - integration, SDK, frontend; APR 19 axis v0.1 - the first evening; APR 22 globe.li - still the current system; JUN perps.studio - exchange in five minutes; JUL Everex - ingest → backtest → signals; AUG builder.markets - six venues, one book">
   <style>
     .what { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Inter, Helvetica, Arial, sans-serif; font-size:19.5px; font-weight:600; letter-spacing:-.2px; fill:#eaeeff }
     .note { font-family:ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size:11.5px; letter-spacing:1.2px; fill:#5d6a90 }
@@ -39,23 +39,23 @@
   <g style="animation:fade .8s ease 0.80s both" class="needs-motion">
     <circle cx="92.0" cy="130" r="5.5" fill="#04070f" stroke="#5d8bff" stroke-width="2"/>
     <circle cx="92.0" cy="130" r="2" fill="#5fe0ff"/>
-    <text x="92.0" y="100" text-anchor="middle" class="what">axis v0.1</text>
-    <text x="92.0" y="82" text-anchor="middle" class="note">the first evening</text>
-    <text x="92.0" y="150" text-anchor="middle" class="when">APR 19</text>
+    <text x="92.0" y="100" text-anchor="middle" class="what">HIP-4 firsts</text>
+    <text x="92.0" y="82" text-anchor="middle" class="note">integration, SDK, frontend</text>
+    <text x="92.0" y="150" text-anchor="middle" class="when">MAR 10</text>
   </g>
   <g style="animation:fade .8s ease 0.96s both" class="needs-motion">
     <circle cx="295.2" cy="130" r="5.5" fill="#04070f" stroke="#5d8bff" stroke-width="2"/>
     <circle cx="295.2" cy="130" r="2" fill="#5fe0ff"/>
-    <text x="295.2" y="176" text-anchor="middle" class="what">globe.li</text>
-    <text x="295.2" y="194" text-anchor="middle" class="note">still the current system</text>
-    <text x="295.2" y="118" text-anchor="middle" class="when">APR 22</text>
+    <text x="295.2" y="176" text-anchor="middle" class="what">axis v0.1</text>
+    <text x="295.2" y="194" text-anchor="middle" class="note">the first evening</text>
+    <text x="295.2" y="118" text-anchor="middle" class="when">APR 19</text>
   </g>
   <g style="animation:fade .8s ease 1.12s both" class="needs-motion">
     <circle cx="498.4" cy="130" r="5.5" fill="#04070f" stroke="#5d8bff" stroke-width="2"/>
     <circle cx="498.4" cy="130" r="2" fill="#5fe0ff"/>
-    <text x="498.4" y="100" text-anchor="middle" class="what">HIP-4 firsts</text>
-    <text x="498.4" y="82" text-anchor="middle" class="note">testnet market, first SDK</text>
-    <text x="498.4" y="150" text-anchor="middle" class="when">MAY</text>
+    <text x="498.4" y="100" text-anchor="middle" class="what">globe.li</text>
+    <text x="498.4" y="82" text-anchor="middle" class="note">still the current system</text>
+    <text x="498.4" y="150" text-anchor="middle" class="when">APR 22</text>
   </g>
   <g style="animation:fade .8s ease 1.28s both" class="needs-motion">
     <circle cx="701.6" cy="130" r="5.5" fill="#04070f" stroke="#5d8bff" stroke-width="2"/>

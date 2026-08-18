@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 352" width="1200" height="352"
+     role="img" aria-label="March 10 2026: Hyperliquid ships HIP-4 to testnet at 15:32; working integration 17:41; working SDK 18:21; the first HIP-4 builder frontend in the world live at 19:12, three hours forty minutes later; whitelabel market creation 21:43.">
+  <style>
+    .ft { font-family:ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size:12.5px; letter-spacing:1.6px; fill:#3f6fe2 }
+    .fl { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Inter, Helvetica, Arial, sans-serif; font-size:17px; font-weight:600; letter-spacing:-.2px; fill:#0c1330 }
+    .fl.hero { fill:#1d93c8 }
+    .fn { font-family:ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size:10.5px; letter-spacing:.8px; fill:#7d8bae }
+    .fg { font-family:ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size:9.5px; letter-spacing:1.4px; fill:#d7e0f4 }
+    .fe { font-family:ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size:11px; letter-spacing:2px; fill:#46557a }
+    .title{ font-family:ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size:12px; letter-spacing:3.2px; fill:#7d8bae }
+    .pro { font-family:ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size:11.5px; letter-spacing:.6px; fill:#46557a }
+    .prok{ font-family:ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size:11.5px; letter-spacing:1.6px; fill:#3f6fe2 }
+    .line{ stroke:#d7e0f4; stroke-width:1.5; fill:none; stroke-dasharray:1020;
+            stroke-dashoffset:1020; animation:dash 2s cubic-bezier(.16,1,.3,1) .5s both }
+    .fade-in { animation:fade 1.2s ease .25s both }
+    
+    @keyframes rise  { from { opacity:0; transform:translateY(10px) } to { opacity:1; transform:none } }
+    @keyframes fade  { from { opacity:0 } to { opacity:1 } }
+    @keyframes draw  { from { transform:scaleX(0) } to { transform:scaleX(1) } }
+    @keyframes blink { 0%,54% { opacity:1 } 55%,100% { opacity:0 } }
+    @keyframes spin  { to { transform:rotate(360deg) } }
+    @keyframes drift { 0%,100% { transform:translateY(0) } 50% { transform:translateY(-3px) } }
+    @keyframes dash  { to { stroke-dashoffset:0 } }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important }
+      .needs-motion { opacity: 1 !important; transform: none !important }
+    }
+
+  </style>
+
+  <rect width="1200" height="352" fill="#f7f9ff"/>
+  <rect x="12.5" y="12.5" width="1174.0" height="326.0" fill="none"
+        stroke="#d7e0f4" stroke-width="1" shape-rendering="crispEdges"/>
+  <g fill="none" stroke="#b4c3e4" stroke-width="1" shape-rendering="crispEdges" class="fade-in">
+    <path d="M 12.5 4.0 V 21.0 M 4.0 12.5 H 21.0"/>
+    <path d="M 1187.5 4.0 V 21.0 M 1179.0 12.5 H 1196.0"/>
+    <path d="M 12.5 331.0 V 348.0 M 4.0 339.5 H 21.0"/>
+    <path d="M 1187.5 331.0 V 348.0 M 1179.0 339.5 H 1196.0"/>
+  </g>
+  <text x="44" y="44" class="title">MARCH 10, 2026 &#183; THE DAY HIP-4 OPENED</text>
+  <g class="fade-in">
+    <text x="44" y="86" class="prok">FEB 25</text>
+    <text x="108" y="86" class="pro">a 194-line HIP-4 adapter skeleton lands in the predictions SDK &#8212; written before Hyperliquid</text>
+    <text x="108" y="104" class="pro">had published any HIP-4 API at all. Thirteen days before testnet opened.</text>
+  </g>
+  <path class="line" d="M 100 214 H 1120"/>
+<text x="100.0" y="142" text-anchor="middle" class="fg">15:00</text><text x="245.7" y="142" text-anchor="middle" class="fg">16:00</text><text x="391.4" y="142" text-anchor="middle" class="fg">17:00</text><text x="537.1" y="142" text-anchor="middle" class="fg">18:00</text><text x="682.9" y="142" text-anchor="middle" class="fg">19:00</text><text x="828.6" y="142" text-anchor="middle" class="fg">20:00</text><text x="974.3" y="142" text-anchor="middle" class="fg">21:00</text><text x="1120.0" y="142" text-anchor="middle" class="fg">22:00</text>
+
+  <g style="animation:fade .7s ease 1.00s both" class="needs-motion">
+    <circle cx="177.7" cy="214" r="5" fill="#f7f9ff" stroke="#3f6fe2" stroke-width="2.4"/>
+    
+    <text x="177.7" y="190" text-anchor="middle" class="ft">15:32</text>
+    <text x="177.7" y="246" text-anchor="middle" class="fl">testnet live</text>
+    <text x="177.7" y="264" text-anchor="middle" class="fn">Hyperliquid ships HIP-4</text>
+  </g>
+  <g style="animation:fade .7s ease 1.18s both" class="needs-motion">
+    <circle cx="491.0" cy="214" r="5" fill="#f7f9ff" stroke="#3f6fe2" stroke-width="2.4"/>
+    
+    <text x="491.0" y="240" text-anchor="middle" class="ft">17:41</text>
+    <text x="491.0" y="180" text-anchor="middle" class="fl">integration</text>
+    <text x="491.0" y="162" text-anchor="middle" class="fn">works</text>
+  </g>
+  <g style="animation:fade .7s ease 1.36s both" class="needs-motion">
+    <circle cx="588.1" cy="214" r="5" fill="#f7f9ff" stroke="#3f6fe2" stroke-width="2.4"/>
+    
+    <text x="588.1" y="190" text-anchor="middle" class="ft">18:21</text>
+    <text x="588.1" y="246" text-anchor="middle" class="fl">SDK</text>
+    <text x="588.1" y="264" text-anchor="middle" class="fn">works</text>
+  </g>
+  <g style="animation:fade .7s ease 1.54s both" class="needs-motion">
+    <circle cx="712.0" cy="214" r="7" fill="#f7f9ff" stroke="#1d93c8" stroke-width="2.4"/>
+    <circle cx="712.0" cy="214" r="2.4" fill="#1d93c8"/>
+    <text x="712.0" y="240" text-anchor="middle" class="ft">19:12</text>
+    <text x="712.0" y="180" text-anchor="middle" class="fl hero">frontend</text>
+    <text x="712.0" y="162" text-anchor="middle" class="fn">first in the world</text>
+  </g>
+  <g style="animation:fade .7s ease 1.72s both" class="needs-motion">
+    <circle cx="1078.7" cy="214" r="5" fill="#f7f9ff" stroke="#3f6fe2" stroke-width="2.4"/>
+    
+    <text x="1078.7" y="190" text-anchor="middle" class="ft">21:43</text>
+    <text x="1078.7" y="246" text-anchor="middle" class="fl">whitelabel</text>
+    <text x="1078.7" y="264" text-anchor="middle" class="fn">market creation ships</text>
+  </g>
+  <g style="animation:fade .8s ease 2.0s both" class="needs-motion">
+    <path d="M 177.7 292 V 302 H 712.0 V 292" fill="none" stroke="#3f6fe2" stroke-width="1.2" opacity=".7"/>
+    <text x="444.9" y="322" text-anchor="middle" class="fe">3H 40M &#183; CHAIN FEATURE &#8594; THE WORLD&#8217;S FIRST HIP-4 BUILDER FRONTEND</text>
+  </g>
+</svg>
