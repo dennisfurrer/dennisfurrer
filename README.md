@@ -16,8 +16,6 @@
   <img alt="5 companies built · $1.1B+ combined market cap · #1 HIP-4 builder, global · $39M+ raised · 1M+ monthly actives" src="assets/stats-dark.svg?v=14" width="100%">
 </picture>
 
-> Currently building outcome.xyz
-
 ### Recent Builds - Worth Exploring
 
 | | | |
@@ -40,6 +38,8 @@
 Two value propositions.
 (1) One prompt is all it takes. Walk away and be notified minutes later with the URL to your live web app.
 (2) Perfect teamwork. Purpose built tooling and the ability to dynamically upgrade shape your team at any moment.
+
+#### Currently focused on building & growing outcome.xyz
 
 ### Recent DeFi Stack
 
