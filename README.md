@@ -16,56 +16,32 @@
   <img alt="5 companies built · $1.1B+ combined market cap · #1 HIP-4 builder, global · $39M+ raised · 1M+ monthly actives" src="assets/stats-dark.svg?v=14" width="100%">
 </picture>
 
-### Selected work
+> Currently building outcome.xyz
+
+### Recent Builds - Worth Exploring
 
 | | | |
 |:--|:--|:--|
-| **globe.li** | News-to-trade terminal integrating Hyperliquid, Polymarket, Limitless and Aster. 1M+ MAU, #1 of 569 on pm.wiki. | [`globe.li`](https://globe.li) |
-| **pro.** | A prompt becomes a deployed URL in one pass - and six tuned tools that read and write the formats your team already uses. More below. | [`pro.dfurrer.com`](https://pro.dfurrer.com) |
-| **perps.studio × hip4.dev** | First market on testnet, first SDK, first whitelabel platform, first market on mainnet. The SDK behind the #1 builder worldwide (outcome.xyz) and a peak-#3, now #6, builder (globe.li). Branded exchange live in five minutes. | [`perps.studio`](https://perps.studio) · [`hip4.dev`](https://hip4.dev) |
-| **outcome.xyz** | HIP-4 prediction markets on Hyperliquid. #1 builder by trading volume, worldwide. Launched 39 days after I joined. | [`outcome.xyz`](https://outcome.xyz) |
-| **app.builder.markets** | One merged book, routed to best execution. Hyperliquid, Aster and Lighter depth combined into one book. Predictions from Hyperliquid, Polymarket and Limitless priced against a fair-value model. HIP-3 perp DEX deployment, HIP-4 market deployment, vaults, analytics, lending and advanced account management. | [`app.builder.markets`](https://app.builder.markets) |
-| **parlayer.xyz** | Multi-venue parlays - Hyperliquid, Polymarket and Limitless legs in one slip. Copula pricing, hard solvency invariant. | [`parlayer.xyz`](https://parlayer.xyz) |\n| **rfq.fi** | Peer-to-peer OTC for custom outcome risk. Define the event/topic, source live quotes from many desks, execute one gasless order - fractional fills matched across counterparties & settled on-chain. | [`rfq.fi`](https://rfq.fi) |
+| **globe.li** | News-to-trade terminal integrating Hyperliquid, Polymarket, Limitless and Aster. Rated #1 on on pm.wiki. (experimental) | [`globe.li`](https://globe.li) |
+| **pro.** | 1 prompt becomes a deployed URL in one pass - and six tuned tools that read and write the formats your team already uses. More below. | [`pro.dfurrer.com`](https://pro.dfurrer.com) |
+| **perps.studio × hip4.dev** | First market on testnet, first SDK, first whitelabel platform, first market on mainnet. The SDK behind the #1 builder worldwide (outcome.xyz) and a peak-#3, now #6, builder (DFU). Branded exchange live in five minutes. | [`perps.studio`](https://perps.studio) · [`hip4.dev`](https://hip4.dev) |
+| **outcome.xyz** | HIP-4 prediction markets on Hyperliquid. #1 builder by trading volume, worldwide. Successfully launched 39 days after I joined. Subsequent successful launches and now the #1 market deployer | [`outcome.xyz`](https://outcome.xyz) |
+| **app.builder.markets** | One merged book, routed to best execution. Hyperliquid, Aster and Lighter depth combined into one book. Predictions from Hyperliquid, Polymarket and Limitless priced against a fair-value model. HIP-3 perp DEX deployment, HIP-4 market deployment, vaults, analytics, lending and advanced account management. (experimental) | [`app.builder.markets`](https://app.builder.markets) |
+| **parlayer.xyz** | Multi-venue parlays - Hyperliquid, Polymarket and Limitless legs in one slip. Copula pricing, hard solvency invariant. (experimental) | [`parlayer.xyz`](https://parlayer.xyz) |\n| **rfq.fi** | Peer-to-peer OTC for custom outcome risk. Define the event/topic, source live quotes from many desks, execute one gasless order - fractional fills matched across counterparties & settled on-chain. (experimental) | [`rfq.fi`](https://rfq.fi) |
 | **laptime.dev** | Performance, security, privacy and SEO in one report card. Browser extension and CI included. | [`laptime.dev`](https://laptime.dev) |
-| **…** | ~100 more builds from this year. Many are shown at the link attached. | [`dfurrer.com/tools`](https://dfurrer.com/tools) |
+| **…** | ~100 more builds, many shown at the link attached. | [`dfurrer.com/tools`](https://dfurrer.com/tools) |
 
 <a href="https://dfurrer.com/tools">
-  <img alt="dfurrer.com/tools - an infinite canvas of 66 tools, with globe.li and pro at the centre" src="assets/tools.webp?v=2" width="100%">
+  <img alt="dfurrer.com/tools, showcase of breadth/depth production tooling at scale" src="assets/tools.webp?v=2" width="100%">
 </a>
 
 ### pro - prompt to product
 
 Two value propositions.
-(1) You share your idea, via a single prompt, and within minutes receive a
-notification with the URL at which the finished solution is deployed. No
-approval gates, no manual deploy step, no auth prompt halfway through.
-(2) Augment your workflow and team with the professional product tooling
-provided here. Mindmaps, targeted & structured research, ux design, software
-development, interactive testing, live collaboration with people and/or agents.
-Taste becomes the differentiator.
-The tools offer backwards and forwards compatibility with industry standard
-solutions including Miro, Figma, VS Code, JIRA, and more. 
+(1) One prompt is all it takes. Walk away and be notified minutes later with the URL to your live web app.
+(2) Perfect teamwork. Purpose built tooling and the ability to dynamically upgrade shape your team at any moment.
 
-
-| | replaces | reads / writes |
-|:--|:--|:--|
-| **think** | Miro | Miro bulk-import bundles, both directions - plus Mermaid, SVG, PNG, JSON |
-| **plan** | Jira | Jira CSV, round-trip - epics ↔ milestones, blocks links, statuses |
-| **design** | Figma | exports a Figma kit, design tokens as JSON |
-| **code** | VS Code / Cursor | imports from GitHub and Storybook, builds a Storybook, exports a zip |
-| **collab** | your org chart | - |
-| **glass** | - | a browser extension that puts the canvas over anybody else's page |
-
-**collab is your agency, not a chat room**, and it scales down to one. It can be
-just you; you and a colleague, with live cursor-sharing across every app; a
-whole team; or agents you define with a role and a brief, running on whichever
-model. Mix them: hire into the gaps your team actually has, set the reporting
-structure inside that org, and automate what shouldn't need a person.
-
-**glass** extends the same canvas over any page in the browser, so a shared link
-carries the page *and* the drawings on it, auto-inviting whoever opens it.
-
-### My DeFi stack in 2026
+### Recent DeFi Stack
 
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="assets/stack-dark.svg?v=14">
