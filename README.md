@@ -20,10 +20,10 @@
 
 | | | |
 |:--|:--|:--|
-| **outcome.xyz** | HIP-4 prediction markets on Hyperliquid. #1 builder by trading volume. Successfully rebuilt & launched 39 days after joining. Now also the #1 market deployer | [`outcome.xyz`](https://outcome.xyz) |
 | **globe.li** | News-to-trade terminal integrating Hyperliquid, Lighter and Aster. Rated #1 on on perps.ai. (experimental) | [`globe.li`](https://globe.li) |
 | **pro.** | 1 prompt becomes a deployed URL in one pass - and six tuned tools that read and write the formats your team already uses. More below. | [`pro.dfurrer.com`](https://pro.dfurrer.com) |
 | **perps.studio × hip4.dev** | First market on testnet, first SDK, first whitelabel platform, first market on mainnet. The SDK behind the #1 builder worldwide (outcome.xyz) and a peak-#3, now #7, builder (DFU). Branded exchange live in five minutes. | [`perps.studio`](https://perps.studio) · [`hip4.dev`](https://hip4.dev) |
+| **outcome.xyz** | HIP-4 prediction markets on Hyperliquid. #1 builder by trading volume. Successfully rebuilt & launched 39 days after joining. Now also the #1 market deployer | [`outcome.xyz`](https://outcome.xyz) |
 | **app.builder.markets** | One merged book, routed to best execution. Hyperliquid, Aster and Lighter depth combined into one book. HIP-3 perp DEX deployment, vaults, analytics, lending and advanced account management. (experimental) | [`app.builder.markets`](https://app.builder.markets) |
 | **laptime.dev** | Performance, security, privacy and SEO in one report card. Browser extension and CI included. | [`laptime.dev`](https://laptime.dev) |
 | **…** | ~50 more builds, many shown at the link attached. | [`dfurrer.com`](https://dfurrer.com) |
