@@ -20,7 +20,7 @@
 
 | | | |
 |:--|:--|:--|
-| **globe.li** | News-to-trade terminal integrating Hyperliquid, Lighter and Aster. Rated #1 on on perps.ai. (experimental) | [`globe.li`](https://globe.li) |
+| **Atlas** | Interactive 3D globe showing live alerts from across the world, synthesised and optimised for making informed trading decisions. | [`at.market`](https://at.market) |
 | **pro.** | 1 prompt becomes a deployed URL in one pass - and six tuned tools that read and write the formats your team already uses. More below. | [`pro.dfurrer.com`](https://pro.dfurrer.com) |
 | **perps.studio × hip4.dev** | First market on testnet, first SDK, first whitelabel platform, first market on mainnet. The SDK behind the #1 builder worldwide (outcome.xyz) and a peak-#3, now #7, builder (DFU). Branded exchange live in five minutes. | [`perps.studio`](https://perps.studio) · [`hip4.dev`](https://hip4.dev) |
 | **outcome.xyz** | HIP-4 prediction markets on Hyperliquid. #1 builder by trading volume. Successfully rebuilt & launched 39 days after joining. Now also the #1 market deployer | [`outcome.xyz`](https://outcome.xyz) |
